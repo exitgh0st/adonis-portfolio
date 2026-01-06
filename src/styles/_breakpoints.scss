@@ -1,0 +1,65 @@
+// Responsive Breakpoints
+
+// Breakpoint values
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1400px;
+
+// Responsive mixins
+@mixin xs {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $breakpoint-xlarge) {
+    @content;
+  }
+}
+
+// Between breakpoints
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: #{$max - 1px}) {
+    @content;
+  }
+}
+
+// Custom breakpoints
+@mixin above($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin below($breakpoint) {
+  @media (max-width: #{$breakpoint - 1px}) {
+    @content;
+  }
+}

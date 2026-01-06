@@ -1,0 +1,46 @@
+// SCSS Variables for Portfolio Theme
+
+// Colors
+$color-primary: #FF0033;
+$color-primary-dark: #cc0029;
+$color-primary-light: #ff3355;
+
+$color-accent: #000000;
+$color-accent-light: #1a1a1a;
+$color-accent-lighter: #2d2d2d;
+
+$color-background: #000000;
+$color-surface: #121212;
+$color-surface-variant: #1e1e1e;
+
+$color-text-primary: #ffffff;
+$color-text-secondary: #b0b0b0;
+$color-text-disabled: #666666;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+// Layout
+$header-height: 64px;
+$max-content-width: 1200px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+// Breakpoints
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-large: 1200px;
