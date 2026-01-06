@@ -1,0 +1,68 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-lg;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
+.skill-category {
+  background-color: $color-surface-variant;
+  border: 1px solid $color-accent-lighter;
+  border-radius: 12px;
+  padding: $spacing-lg;
+  transition: all $transition-normal;
+
+  &:hover {
+    @include hover-lift;
+    border-color: $color-primary;
+  }
+}
+
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $color-primary;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  background-color: rgba($color-primary, 0.1) !important;
+  color: $color-text-primary !important;
+  border: 1px solid rgba($color-primary, 0.3);
+  font-size: 0.9rem;
+  transition: all $transition-fast;
+
+  &:hover {
+    background-color: rgba($color-primary, 0.2) !important;
+    border-color: $color-primary;
+    transform: translateY(-2px);
+  }
+}

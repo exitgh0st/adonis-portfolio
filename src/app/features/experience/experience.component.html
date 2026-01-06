@@ -1,0 +1,60 @@
+<app-section-container id="experience" title="Experience">
+  <div class="timeline">
+    @for (exp of workExperiences(); track exp.id; let i = $index) {
+      <div class="timeline-item" appAnimateOnScroll [animationDelay]="i * 150">
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+          @if (!$last) {
+            <div class="timeline-line"></div>
+          }
+        </div>
+
+        <mat-card class="experience-card">
+          <mat-card-header>
+            <div class="card-header-content">
+              <div class="exp-title-section">
+                <h3 class="exp-position">{{ exp.position }}</h3>
+                <h4 class="exp-company">
+                  <mat-icon>business</mat-icon>
+                  {{ exp.company }}
+                </h4>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <mat-icon>calendar_today</mat-icon>
+                  {{ exp.startDate }} - {{ exp.endDate || 'Present' }}
+                </span>
+                <span class="exp-location">
+                  <mat-icon>place</mat-icon>
+                  {{ exp.location }}
+                </span>
+              </div>
+            </div>
+          </mat-card-header>
+
+          <mat-card-content>
+            <p class="exp-description">{{ exp.description }}</p>
+
+            @if (exp.responsibilities && exp.responsibilities.length > 0) {
+              <ul class="exp-responsibilities">
+                @for (responsibility of exp.responsibilities; track $index) {
+                  <li>{{ responsibility }}</li>
+                }
+              </ul>
+            }
+
+            @if (exp.technologies && exp.technologies.length > 0) {
+              <div class="exp-technologies">
+                <mat-chip-set>
+                  @for (tech of exp.technologies; track tech) {
+                    <mat-chip class="tech-chip">{{ tech }}</mat-chip>
+                  }
+                </mat-chip-set>
+              </div>
+            }
+          </mat-card-content>
+        </mat-card>
+      </div>
+    }
+  </div>
+</app-section-container>

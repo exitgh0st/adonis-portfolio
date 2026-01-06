@@ -1,0 +1,9 @@
+<app-section-container id="projects" title="Projects">
+  <div class="projects-grid">
+    @for (project of projects(); track project.id; let i = $index) {
+      <div appAnimateOnScroll [animationDelay]="i * 100">
+        <app-project-card [project]="project"></app-project-card>
+      </div>
+    }
+  </div>
+</app-section-container>

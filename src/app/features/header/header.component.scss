@@ -1,0 +1,146 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $color-accent-lighter;
+  height: auto !important;
+  padding: 0 !important;
+  box-shadow: $shadow-md;
+
+  &.menu-open {
+    .mobile-nav {
+      display: flex;
+    }
+  }
+}
+
+.header-container {
+  @include flex-between;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: $spacing-sm $spacing-md;
+  width: 100%;
+  height: $header-height;
+}
+
+// Logo
+.logo {
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    .logo-text {
+      color: $color-primary-light;
+    }
+  }
+}
+
+.logo-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $color-text-primary;
+  transition: color $transition-fast;
+}
+
+.logo-accent {
+  color: $color-primary;
+}
+
+// Desktop Navigation
+.desktop-nav {
+  display: flex;
+  gap: $spacing-sm;
+
+  @include respond-below($breakpoint-tablet) {
+    display: none;
+  }
+
+  button {
+    color: $color-text-secondary !important;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-text-primary !important;
+    }
+
+    &.active {
+      color: $color-primary !important;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 2px;
+        background-color: $color-primary;
+        border-radius: 1px;
+      }
+    }
+  }
+}
+
+// Mobile Menu Button
+.mobile-menu-btn {
+  display: none;
+
+  @include respond-below($breakpoint-tablet) {
+    display: flex;
+  }
+
+  mat-icon {
+    color: $color-text-primary;
+  }
+}
+
+// Mobile Navigation
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  padding: $spacing-md;
+  gap: $spacing-xs;
+  background-color: $color-surface;
+  border-top: 1px solid $color-accent-lighter;
+
+  @include respond-below($breakpoint-tablet) {
+    display: flex;
+  }
+
+  button {
+    color: $color-text-secondary !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+    justify-content: flex-start;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 4px;
+    transition: all $transition-fast;
+
+    &:hover {
+      background-color: $color-accent-lighter !important;
+      color: $color-text-primary !important;
+    }
+
+    &.active {
+      background-color: rgba($color-primary, 0.1) !important;
+      color: $color-primary !important;
+      border-left: 3px solid $color-primary;
+    }
+  }
+}

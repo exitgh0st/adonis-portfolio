@@ -1,0 +1,46 @@
+<mat-toolbar class="header" [class.menu-open]="mobileMenuOpen()">
+  <div class="header-container">
+    <!-- Logo/Name -->
+    <div class="logo" (click)="scrollToSection('home')">
+      <span class="logo-text">Adonis<span class="logo-accent">.</span></span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      @for (link of navLinks; track link.sectionId) {
+        <button
+          mat-button
+          [class.active]="isActive(link.sectionId)"
+          (click)="scrollToSection(link.sectionId)"
+        >
+          {{ link.label }}
+        </button>
+      }
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      mat-icon-button
+      class="mobile-menu-btn"
+      (click)="toggleMobileMenu()"
+      [attr.aria-label]="mobileMenuOpen() ? 'Close menu' : 'Open menu'"
+    >
+      <mat-icon>{{ mobileMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  @if (mobileMenuOpen()) {
+    <nav class="mobile-nav">
+      @for (link of navLinks; track link.sectionId) {
+        <button
+          mat-button
+          [class.active]="isActive(link.sectionId)"
+          (click)="scrollToSection(link.sectionId)"
+        >
+          {{ link.label }}
+        </button>
+      }
+    </nav>
+  }
+</mat-toolbar>

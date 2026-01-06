@@ -1,0 +1,17 @@
+<app-section-container id="skills" title="Skills & Technologies">
+  <div class="skills-container">
+    @for (category of skillsByCategory() | keyvalue: preserveOrder; track category.key; let i = $index) {
+      <div class="skill-category" appAnimateOnScroll [animationDelay]="i * 100">
+        <h3 class="category-title">
+          <mat-icon>code</mat-icon>
+          {{ category.key }}
+        </h3>
+        <mat-chip-set class="skills-chips">
+          @for (skill of category.value; track skill.name) {
+            <mat-chip class="skill-chip">{{ skill.name }}</mat-chip>
+          }
+        </mat-chip-set>
+      </div>
+    }
+  </div>
+</app-section-container>

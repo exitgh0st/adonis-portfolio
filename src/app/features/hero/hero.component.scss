@@ -1,0 +1,198 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/animations' as *;
+
+:host {
+  display: block;
+}
+
+.hero {
+  min-height: 100vh;
+  @include flex-center;
+  position: relative;
+  background: linear-gradient(135deg, $color-background 0%, $color-surface 100%);
+  padding: $header-height $spacing-md $spacing-xxl;
+
+  @include mobile {
+    padding: $header-height $spacing-sm $spacing-xl;
+  }
+}
+
+.hero-content {
+  max-width: $max-content-width;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-text {
+  @include flex-column;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.hero-greeting {
+  font-size: 1.2rem;
+  color: $color-text-secondary;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeInDown 0.6s ease 0.2s forwards;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, $color-text-primary 0%, $color-primary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: $spacing-xxl 0 $spacing-sm 0;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.4s forwards;
+
+  @include mobile {
+    margin-top: $spacing-md;
+  }
+}
+
+.hero-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.6s forwards;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  color: $color-text-secondary;
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.8s forwards;
+}
+
+.hero-actions {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: $spacing-lg;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 1s forwards;
+
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .cta-button {
+    background-color: $color-primary;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all $transition-normal;
+
+    &:hover {
+      background-color: $color-primary-light;
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg;
+    }
+  }
+
+  .contact-button {
+    background-color: $color-surface-variant;
+    border: 1px solid $color-accent-lighter;
+    color: $color-primary;
+    cursor: pointer;
+    transition: all $transition-normal;
+
+    &:hover {
+      border-color: $color-primary;
+      background-color: rgba($color-primary, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.hero-social {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-xxl;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 1.2s forwards;
+
+  .social-link {
+    @include flex-center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $color-surface-variant;
+    color: $color-text-primary;
+    transition: all $transition-normal;
+    border: 1px solid $color-accent-lighter;
+
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+    }
+
+    mat-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: $spacing-xxl;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  opacity: 0;
+  animation: fadeIn 0.6s ease 1.4s forwards, bounce 2s ease 1.4s infinite;
+
+  mat-icon {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: $color-primary;
+  }
+
+  &:hover {
+    mat-icon {
+      color: $color-primary-light;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -10px);
+  }
+  60% {
+    transform: translate(-50%, -5px);
+  }
+}

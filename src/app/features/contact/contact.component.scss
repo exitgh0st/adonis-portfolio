@@ -1,0 +1,138 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+
+  // Reduce bottom spacing so scrolling to contact goes to page bottom
+  ::ng-deep app-section-container .section-container {
+    padding-bottom: $spacing-xxl;
+    min-height: auto;
+  }
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-message {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: $color-text-secondary;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xxl;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.contact-card {
+  background-color: $color-surface-variant !important;
+  border: 1px solid $color-accent-lighter !important;
+  border-radius: 12px;
+  padding: $spacing-xl !important;
+  text-align: center;
+  @include flex-column;
+  align-items: center;
+  gap: $spacing-md;
+  transition: all $transition-normal;
+  box-shadow: none !important;
+
+  &:hover {
+    @include hover-lift;
+    border-color: $color-primary !important;
+  }
+}
+
+.contact-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: $color-primary;
+}
+
+.contact-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: $color-text-primary;
+  margin: 0;
+}
+
+.contact-link {
+  font-size: 1rem;
+  color: $color-text-secondary;
+  word-break: break-word;
+  transition: color $transition-fast;
+
+  &:hover:not(.location) {
+    color: $color-primary;
+  }
+
+  &.location {
+    cursor: default;
+    font-weight: 500;
+    color: $color-text-primary;
+  }
+}
+
+.timezone {
+  font-size: 0.9rem;
+  color: $color-text-disabled;
+  margin: 0;
+}
+
+.copy-button {
+  margin-top: $spacing-sm;
+  width: 100%;
+
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.cta-section {
+  text-align: center;
+  padding: $spacing-xxl;
+  background-color: $color-surface-variant;
+  border-radius: 12px;
+  border: 2px solid $color-accent-lighter;
+
+  h3 {
+    font-size: 1.8rem;
+    color: $color-text-primary;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.cta-button {
+  font-size: 1.1rem;
+  padding: 16px 40px !important;
+
+  mat-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}

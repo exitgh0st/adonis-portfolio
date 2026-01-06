@@ -1,0 +1,37 @@
+<section id="home" class="hero" appScrollSpy (appScrollSpy)="onSectionActive($event)">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-name">{{ profile().name }}</h1>
+      <h2 class="hero-title">{{ profile().title }}</h2>
+      <p class="hero-tagline">{{ profile().tagline }}</p>
+
+      <div class="hero-actions">
+        <button class="cta-button" (click)="scrollToProjects()">
+          <mat-icon>work</mat-icon>
+          View My Work
+        </button>
+        <button class="contact-button" (click)="scrollToContact()">
+          <mat-icon>email</mat-icon>
+          Contact Me
+        </button>
+      </div>
+
+      <div class="hero-social">
+        <a [href]="profile().github" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <mat-icon>code</mat-icon>
+        </a>
+        <a [href]="profile().linkedin" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <mat-icon>business</mat-icon>
+        </a>
+        <a [href]="'mailto:' + profile().email" class="social-link" aria-label="Email">
+          <mat-icon>email</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" (click)="scrollToProjects()">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </div>
+</section>

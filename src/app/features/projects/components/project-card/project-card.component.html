@@ -1,0 +1,61 @@
+<mat-card class="project-card">
+  <mat-card-header>
+    <mat-card-title class="project-title">
+      {{ project.name }}
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p class="project-description">
+      {{ project.description }}
+    </p>
+
+    @if (project.highlights && project.highlights.length > 0) {
+      <ul class="project-highlights">
+        @for (highlight of project.highlights; track $index) {
+          <li>{{ highlight }}</li>
+        }
+      </ul>
+    }
+
+    <div class="project-technologies">
+      <mat-chip-set>
+        @for (tech of project.technologies; track tech) {
+          <mat-chip class="tech-chip">{{ tech }}</mat-chip>
+        }
+      </mat-chip-set>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="project-actions">
+    @if (project.websiteUrl) {
+      <a [href]="project.websiteUrl" target="_blank" rel="noopener" mat-stroked-button>
+        <mat-icon>language</mat-icon>
+        View Website
+      </a>
+    } @else if (project.githubUrl) {
+      <a [href]="project.githubUrl" target="_blank" rel="noopener" mat-stroked-button>
+        <mat-icon>code</mat-icon>
+        View Code
+      </a>
+    }
+    @if (project.caseStudyUrl) {
+      <a [href]="project.caseStudyUrl" mat-stroked-button>
+        <mat-icon>description</mat-icon>
+        View Case Study
+      </a>
+    }
+    @if (project.liveUrl) {
+      <a [href]="project.liveUrl" target="_blank" rel="noopener" mat-stroked-button>
+        <mat-icon>launch</mat-icon>
+        Live Demo
+      </a>
+    }
+    @if (project.npmUrl) {
+      <a [href]="project.npmUrl" target="_blank" rel="noopener" mat-stroked-button>
+        <mat-icon>inventory_2</mat-icon>
+        View Package
+      </a>
+    }
+  </mat-card-actions>
+</mat-card>
