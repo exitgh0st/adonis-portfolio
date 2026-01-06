@@ -1,0 +1,63 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.section-container {
+  padding: $spacing-xxl $spacing-md;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    padding: $spacing-xl $spacing-sm;
+    min-height: auto;
+  }
+}
+
+.section-content {
+  max-width: $max-content-width;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-md;
+
+  @include mobile {
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: $color-primary;
+    border-radius: 2px;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: $color-text-secondary;
+  margin-top: $spacing-md;
+}
+
+.section-body {
+  // Content goes here
+}

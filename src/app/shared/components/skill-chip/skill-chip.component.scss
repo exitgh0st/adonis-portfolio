@@ -1,0 +1,36 @@
+@use '../../../../styles/variables' as *;
+
+:host {
+  display: inline-block;
+}
+
+mat-chip {
+  background-color: $color-surface-variant !important;
+  color: $color-text-primary !important;
+  border: 1px solid $color-accent-lighter;
+  transition: all $transition-fast;
+
+  &:hover {
+    background-color: $color-primary !important;
+    border-color: #cc0029;
+    transform: translateY(-2px);
+  }
+
+  &.chip-small {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    height: 24px;
+  }
+
+  &.chip-medium {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    height: 32px;
+  }
+
+  &.chip-large {
+    font-size: 1rem;
+    padding: 8px 16px;
+    height: 40px;
+  }
+}
