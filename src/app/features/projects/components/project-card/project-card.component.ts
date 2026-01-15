@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,6 +11,7 @@ import { Project } from '../../../../core/models';
 @Component({
   selector: 'app-project-card',
   imports: [
+    RouterLink,
     MatCardModule,
     MatButtonModule,
     MatIconModule,

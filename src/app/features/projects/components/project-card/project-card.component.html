@@ -40,7 +40,7 @@
       </a>
     }
     @if (project.caseStudyUrl) {
-      <a [href]="project.caseStudyUrl" mat-stroked-button>
+      <a [routerLink]="'/' + project.caseStudyUrl" mat-stroked-button>
         <mat-icon>description</mat-icon>
         View Case Study
       </a>
