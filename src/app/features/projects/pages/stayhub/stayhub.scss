@@ -15,6 +15,38 @@
     }
   }
 
+  // Back Button
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-surface);
+      transform: translateX(-4px);
+    }
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(-4px);
+    }
+  }
+
   // Hero Section
   .hero-section {
     padding: var(--spacing-xxl) 0;

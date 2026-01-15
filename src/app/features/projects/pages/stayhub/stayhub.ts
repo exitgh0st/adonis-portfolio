@@ -1,5 +1,5 @@
 import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser, Location } from '@angular/common';
 
 @Component({
   selector: 'app-stayhub',
@@ -10,6 +10,11 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 })
 export class Stayhub implements OnInit {
   private platformId = inject(PLATFORM_ID);
+  private location = inject(Location);
+
+  goBack(): void {
+    this.location.back();
+  }
 
   // Smooth scroll to section
   scrollToSection(sectionId: string): void {
