@@ -191,6 +191,21 @@ export class PortfolioDataService {
       ]
     },
     {
+      id: 'proj-6',
+      name: 'AI-Powered Project Management Automation',
+      description: 'AI-powered n8n workflow automating project documentation and test case generation across Asana and Google APIs.',
+      longDescription: 'A sophisticated automation workflow built with n8n that integrates multiple AI agents (powered by DeepSeek) with project management tools. The system extracts task data from Asana, uses AI to generate structured documentation, test plans, and test cases, then automatically creates and populates Google Docs and Google Sheets with the AI-generated content.',
+      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API'],
+      caseStudyUrl: 'projects/rtm-automation',
+      status: 'completed',
+      featured: true,
+      highlights: [
+        'AI-powered test case generation',
+        'Automated documentation creation',
+        'Multi-platform API integration'
+      ]
+    },
+    {
       id: 'proj-1',
       name: 'ng-admin-core',
       description: 'Angular package providing core admin functionality and authentication features for enterprise applications.',
@@ -204,21 +219,6 @@ export class PortfolioDataService {
         'Standalone Angular components',
         'Authentication & authorization',
         'Reusable admin components'
-      ]
-    },
-    {
-      id: 'proj-6',
-      name: 'AI-Powered Project Management Automation',
-      description: 'AI-powered n8n workflow automating project documentation and test case generation across Asana and Google APIs.',
-      longDescription: 'A sophisticated automation workflow built with n8n that integrates multiple AI agents (powered by DeepSeek) with project management tools. The system extracts task data from Asana, uses AI to generate structured documentation, test plans, and test cases, then automatically creates and populates Google Docs and Google Sheets with the AI-generated content.',
-      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API'],
-      caseStudyUrl: 'projects/rtm-automation',
-      status: 'completed',
-      featured: true,
-      highlights: [
-        'AI-powered test case generation',
-        'Automated documentation creation',
-        'Multi-platform API integration'
       ]
     },
     {
