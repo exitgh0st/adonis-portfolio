@@ -1,1 +1,508 @@
-<p>stayhub works!</p>
+<div class="stayhub-showcase">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="project-title">StayHub</h1>
+      <p class="project-subtitle">Property Management System</p>
+      <p class="project-tagline">Full-Stack Portfolio Case Study & Showcase</p>
+      <a href="https://www.stayhub.homes" target="_blank" rel="noopener noreferrer" class="project-url">
+        <span>www.stayhub.homes</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Full-Stack Developer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Target Users</span>
+          <span class="meta-value">Property Owners/Landlords, Tenants</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tech Stack</span>
+          <span class="meta-value">Angular 16, Express.js, TypeScript, PostgreSQL, Prisma ORM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="content-section overview-section">
+    <div class="container">
+      <h2 class="section-title">Project Overview</h2>
+      <p class="section-description">
+        StayHub is a comprehensive property and tenancy management system designed to streamline rental property operations for landlords and tenants. The platform automates complex billing calculations, manages tenant relationships, tracks utility consumption through submeter readings, and provides real-time access to financial information for all stakeholders.
+      </p>
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section class="content-section problem-section">
+    <div class="container">
+      <h2 class="section-title">Problem Statement</h2>
+      <p class="intro-text">Property management, particularly in multi-unit residential buildings, presents several critical challenges:</p>
+
+      <div class="problems-grid">
+        <div class="problem-card">
+          <h3>Manual Bill Calculation</h3>
+          <p>Landlords spend significant time manually calculating utility bills based on submeter readings. Each unit operates on a submeter connected to the main utility meter (MERALCO for electricity, Maynilad for water), requiring proportional cost allocation based on consumption.</p>
+        </div>
+
+        <div class="problem-card">
+          <h3>Complex Utility Distribution</h3>
+          <p>When multiple units share a single utility statement (main meter), calculating each unit's share based on their submeter readings involves complex proportional calculations that are error-prone when done manually.</p>
+        </div>
+
+        <div class="problem-card">
+          <h3>Limited Transparency</h3>
+          <p>Tenants lack real-time visibility into their billing status, pending payments, and payment history, leading to confusion and disputes.</p>
+        </div>
+
+        <div class="problem-card">
+          <h3>Inefficient Communication</h3>
+          <p>Announcing maintenance schedules, policy updates, or important notices requires individual contact with each tenant.</p>
+        </div>
+
+        <div class="problem-card">
+          <h3>Document Management</h3>
+          <p>Storing and accessing tenancy contracts, utility bills, and payment records involves cumbersome paper-based systems or disorganized digital files.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Overview -->
+  <section class="content-section solution-section">
+    <div class="container">
+      <h2 class="section-title">Solution Overview</h2>
+      <p class="intro-text">
+        StayHub addresses these challenges through a comprehensive web-based platform that automates billing calculations, centralizes property management operations, and provides role-based portals for both landlords and tenants.
+      </p>
+    </div>
+  </section>
+
+  <!-- Authentication & Public Website -->
+  <section class="content-section feature-section">
+    <div class="container">
+      <h2 class="section-title">Authentication & Public Website</h2>
+      <p class="intro-text">The system features a secure login portal and a public-facing website for property showcase:</p>
+
+      <div class="screenshot-grid">
+        <div class="screenshot-item">
+          <img src="/images/projects/stayhub/fig-1.png" alt="Secure Login Portal with Role-Based Authentication">
+          <p class="screenshot-caption">Figure 1: Secure Login Portal with Role-Based Authentication</p>
+        </div>
+
+        <div class="screenshot-item">
+          <img src="/images/projects/stayhub/fig-2.png" alt="Public Home Page - Hero Section">
+          <p class="screenshot-caption">Figure 2: Public Home Page - Hero Section</p>
+        </div>
+
+        <div class="screenshot-item">
+          <img src="/images/projects/stayhub/fig-3.png" alt="Public Home Page - Available Units Section">
+          <p class="screenshot-caption">Figure 3: Public Home Page - Available Units Section</p>
+        </div>
+
+        <div class="screenshot-item">
+          <img src="/images/projects/stayhub/fig-4.png" alt="Public Units Browsing Page">
+          <p class="screenshot-caption">Figure 4: Public Units Browsing Page with Pricing (₱5,000 - ₱7,500/month)</p>
+        </div>
+
+        <div class="screenshot-item">
+          <img src="/images/projects/stayhub/fig-5.png" alt="Detailed Unit Information Page">
+          <p class="screenshot-caption">Figure 5: Detailed Unit Information Page</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Portal Features -->
+  <section class="content-section admin-section">
+    <div class="container">
+      <h2 class="section-title">Admin Portal Features</h2>
+
+      <!-- Tenant Management -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Tenant Management</h3>
+        <p class="subsection-description">Comprehensive tenant management with full CRUD operations, contract tracking, and unit assignments:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-6.png" alt="Tenants Management Dashboard">
+            <p class="screenshot-caption">Figure 6: Tenants Management Dashboard</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-7.png" alt="Create New Tenant - Personal Information Form">
+            <p class="screenshot-caption">Figure 7: Create New Tenant - Personal Information Form</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-8.png" alt="Create New Tenant - Tenancy Details">
+            <p class="screenshot-caption">Figure 8: Create New Tenant - Tenancy Details and Contract Upload</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-9.png" alt="Edit Tenant Information - Part 1">
+            <p class="screenshot-caption">Figure 9: Edit Tenant Information - Part 1</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-10.png" alt="Edit Tenant Information - Part 2">
+            <p class="screenshot-caption">Figure 10: Edit Tenant Information - Part 2</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-11.png" alt="Delete Confirmation Dialog">
+            <p class="screenshot-caption">Figure 11: Delete Confirmation Dialog with Safety Prompt</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unit Management -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Unit Management</h3>
+        <p class="subsection-description">Property and unit management with rental rates, photos, and utility statement linkage:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-12.png" alt="Units Management Page">
+            <p class="screenshot-caption">Figure 12: Units Management Page</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Management -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">User Management</h3>
+        <p class="subsection-description">Create and manage user accounts with role-based access control:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-13.png" alt="Users Management Dashboard">
+            <p class="screenshot-caption">Figure 13: Users Management Dashboard</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-14.png" alt="Create New User Account">
+            <p class="screenshot-caption">Figure 14: Create New User Account with Role Assignment</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-15.png" alt="Edit User Account Details">
+            <p class="screenshot-caption">Figure 15: Edit User Account Details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Utility Management System -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Utility Management System</h3>
+        <p class="subsection-description highlight">The core innovation of StayHub: automated utility bill generation based on submeter readings and main utility statements.</p>
+
+        <h4 class="feature-heading">Utility Statements (Main Bills)</h4>
+        <p class="subsection-description">Input main utility bills from providers (MERALCO, Maynilad) with total consumption and cost:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-16.png" alt="Utility Statements Management">
+            <p class="screenshot-caption">Figure 16: Utility Statements Management (MERALCO showing ₱5,500.00)</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-17.png" alt="Create Utility Statement Form">
+            <p class="screenshot-caption">Figure 17: Create Utility Statement Form</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-18.png" alt="Utility Statement Records">
+            <p class="screenshot-caption">Figure 18: Utility Statement Records - Linking Units to Statements</p>
+          </div>
+        </div>
+
+        <h4 class="feature-heading">Utility Readings (Submeter Data)</h4>
+        <p class="subsection-description">Record submeter readings with photo documentation for audit trails:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-19.png" alt="Utility Readings Dashboard">
+            <p class="screenshot-caption">Figure 19: Utility Readings Dashboard with Meter Photos</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-20.png" alt="Create Utility Reading">
+            <p class="screenshot-caption">Figure 20: Create Utility Reading with Photo Upload</p>
+          </div>
+        </div>
+
+        <h4 class="feature-heading">Automated Bill Generation</h4>
+        <p class="subsection-description">The system automatically calculates proportional costs based on consumption ratios:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-21.png" alt="Generate Monthly Utility Bills">
+            <p class="screenshot-caption">Figure 21: Generate Monthly Utility Bills Interface</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-22.png" alt="Successfully Generated Bills">
+            <p class="screenshot-caption">Figure 22: Successfully Generated Bills Ready for Distribution</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bills Management -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Bills Management</h3>
+        <p class="subsection-description">Track all bills with status monitoring, payment tracking, and manual bill creation:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-23.png" alt="Bills Management Dashboard">
+            <p class="screenshot-caption">Figure 23: Bills Management Dashboard</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-24.png" alt="Create Bill Form - Part 1">
+            <p class="screenshot-caption">Figure 24: Create Bill Form - Part 1 (Rent/Utility/Other)</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-25.png" alt="Create Bill Form - Part 2">
+            <p class="screenshot-caption">Figure 25: Create Bill Form - Part 2 (Amount and Due Date)</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-26.png" alt="Bills Page After Creating">
+            <p class="screenshot-caption">Figure 26: Bills Page After Creating New Bill</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Announcements System -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Announcements System</h3>
+        <p class="subsection-description">Broadcast important notices to all tenants through the platform:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-27.png" alt="Create Announcement Interface">
+            <p class="screenshot-caption">Figure 27: Create Announcement Interface</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-28.png" alt="Edit Announcement">
+            <p class="screenshot-caption">Figure 28: Edit Announcement with Rich Text Editor</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-29.png" alt="Success Dialog">
+            <p class="screenshot-caption">Figure 29: Success Dialog After Creating/Editing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tenant Portal Features -->
+  <section class="content-section tenant-section">
+    <div class="container">
+      <h2 class="section-title">Tenant Portal Features</h2>
+      <p class="intro-text">A dedicated portal providing tenants with transparent access to their billing information, announcements, and account management.</p>
+
+      <!-- Dashboard & Navigation -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Dashboard & Navigation</h3>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-30.png" alt="Tenant Dashboard">
+            <p class="screenshot-caption">Figure 30: Tenant Dashboard - Pending Bills and Recent Announcements</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-31.png" alt="User Menu">
+            <p class="screenshot-caption">Figure 31: User Menu with Settings and Logout Options</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bills & Payment -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Bills & Payment</h3>
+        <p class="subsection-description">Browse all bills with detailed breakdowns and professional PDF generation:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-32.png" alt="My Bills Page">
+            <p class="screenshot-caption">Figure 32: My Bills Page with Status Filters</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-33.png" alt="Detailed Bill Breakdown">
+            <p class="screenshot-caption">Figure 33: Detailed Bill Breakdown (₱2,357.14 for 9 kWh consumption)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional PDF Bill Generation -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Professional PDF Bill Generation</h3>
+        <p class="subsection-description">Generate professional, branded PDF statements with complete utility breakdown and verification:</p>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-34.png" alt="PDF Bill - Page 1">
+            <p class="screenshot-caption">Figure 34: PDF Bill - Page 1: Statement of Account with QR Code and Payment Instructions</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-35.png" alt="PDF Bill - Page 2">
+            <p class="screenshot-caption">Figure 35: PDF Bill - Page 2: Meter Reading Photo Verification</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tenancy Information & Announcements -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Tenancy Information & Announcements</h3>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-36.png" alt="Personal Tenancy Information">
+            <p class="screenshot-caption">Figure 36: Personal Tenancy Information and Lease Details</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-37.png" alt="Announcements Board">
+            <p class="screenshot-caption">Figure 37: Announcements Board for Tenants</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Settings -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Account Settings</h3>
+
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="/images/projects/stayhub/fig-38.png" alt="Account Settings">
+            <p class="screenshot-caption">Figure 38: Account Settings with Profile Picture Management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Implementation -->
+  <section class="content-section technical-section">
+    <div class="container">
+      <h2 class="section-title">Technical Implementation</h2>
+
+      <div class="tech-stack">
+        <h3 class="subsection-title">Technology Stack</h3>
+        <div class="tech-table">
+          <div class="tech-row">
+            <div class="tech-category">Frontend</div>
+            <div class="tech-values">Angular 16.2, TypeScript 4.9, Angular Material 15.2, RxJS 7.8, SCSS, jsPDF 3.0, SweetAlert2 11.17</div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-category">Backend</div>
+            <div class="tech-values">Node.js, Express.js, TypeScript 5.3</div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-category">Database</div>
+            <div class="tech-values">PostgreSQL 16, Prisma ORM 5.9</div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-category">Security</div>
+            <div class="tech-values">JWT (jsonwebtoken 9.0), bcrypt 5.1</div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-category">File Handling</div>
+            <div class="tech-values">Multer 1.4, Sharp 0.33</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="challenges-solutions">
+        <h3 class="subsection-title">Key Technical Challenges & Solutions</h3>
+
+        <div class="challenge-item">
+          <h4 class="challenge-title">1. Automated Utility Bill Generation</h4>
+          <div class="challenge-content">
+            <p><strong>Challenge:</strong> Automating the calculation of individual unit bills based on submeter readings and main utility statements. Each property receives a single utility bill (e.g., MERALCO electricity bill), but individual units operate on submeters requiring proportional cost allocation.</p>
+            <p><strong>Solution:</strong> Implemented a multi-step calculation algorithm that retrieves the utility statement, fetches associated unit readings, calculates cost per unit (₱/kWh = Total Cost ÷ Total Consumption), and multiplies each unit's consumption by this rate.</p>
+            <p class="example">Example: For a ₱5,500 bill with 21 kWh total, Unit A1 consuming 9 kWh pays (9 ÷ 21) × ₱5,500 = ₱2,357.14.</p>
+          </div>
+        </div>
+
+        <div class="challenge-item">
+          <h4 class="challenge-title">2. Data Integrity & Complex Relationships</h4>
+          <div class="challenge-content">
+            <p><strong>Challenge:</strong> Managing complex relationships between utility statements, units, readings, and bills while ensuring data consistency.</p>
+            <p><strong>Solution:</strong> Created junction tables (UtilityStatementRecord) linking statements to units, used Prisma transactions for atomic bill generation, implemented cascade delete with protection for records with existing bills, and added validation middleware.</p>
+          </div>
+        </div>
+
+        <div class="challenge-item">
+          <h4 class="challenge-title">3. Role-Based Access Control</h4>
+          <div class="challenge-content">
+            <p><strong>Challenge:</strong> Strict separation between admin and tenant capabilities while maintaining security.</p>
+            <p><strong>Solution:</strong> JWT-based authentication with role claims, backend middleware for token validation and role checking, frontend route guards (AuthGuard), service-layer data filtering ensuring tenants only see their own information, and bcrypt password hashing.</p>
+          </div>
+        </div>
+
+        <div class="challenge-item">
+          <h4 class="challenge-title">4. Professional PDF Generation</h4>
+          <div class="challenge-content">
+            <p><strong>Challenge:</strong> Professional, printable bill statements with branding, QR codes, and meter verification photos.</p>
+            <p><strong>Solution:</strong> Integrated jsPDF with custom templates generating two-page documents including property branding, detailed consumption breakdown, QR codes for payment, bank transfer instructions, actual meter reading photos, billing period dates, and terms & conditions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results & Impact -->
+  <section class="content-section results-section">
+    <div class="container">
+      <h2 class="section-title">Results & Impact</h2>
+
+      <div class="results-grid">
+        <div class="result-category">
+          <h3 class="result-title">Operational Efficiency</h3>
+          <ul class="result-list">
+            <li><strong>Eliminated Manual Calculations:</strong> Automated utility bill generation completely removed manual calculation requirements, saving significant time each billing cycle.</li>
+            <li><strong>Reduced Billing Errors:</strong> Automated proportional cost distribution ensures mathematical accuracy, eliminating human calculation errors and potential disputes.</li>
+            <li><strong>Streamlined Property Management:</strong> Centralized platform replaced multiple disconnected systems and paper-based processes.</li>
+          </ul>
+        </div>
+
+        <div class="result-category">
+          <h3 class="result-title">Tenant Experience</h3>
+          <ul class="result-list">
+            <li><strong>Real-Time Bill Visibility:</strong> Instant access to billing information without contacting landlord or waiting for paper statements.</li>
+            <li><strong>Billing Transparency:</strong> Detailed breakdown with actual meter photos provides complete transparency, reducing disputes and building trust.</li>
+            <li><strong>Professional Documentation:</strong> Professional PDF statements with QR codes and payment instructions simplify payment processing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="content-section conclusion-section">
+    <div class="container">
+      <h2 class="section-title">Conclusion</h2>
+      <p class="conclusion-text">
+        StayHub demonstrates how modern web technologies can solve real-world property management challenges. By automating complex utility bill calculations and providing transparent, accessible platforms for both landlords and tenants, the system significantly improves operational efficiency while enhancing the tenant experience. The successful implementation of automated proportional billing based on submeter readings represents a significant technical achievement that delivers tangible value to property managers and tenants alike.
+      </p>
+    </div>
+  </section>
+</div>
