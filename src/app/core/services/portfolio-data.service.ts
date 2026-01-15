@@ -212,7 +212,7 @@ export class PortfolioDataService {
       description: 'AI-powered n8n workflow automating project documentation and test case generation across Asana and Google APIs.',
       longDescription: 'A sophisticated automation workflow built with n8n that integrates multiple AI agents (powered by DeepSeek) with project management tools. The system extracts task data from Asana, uses AI to generate structured documentation, test plans, and test cases, then automatically creates and populates Google Docs and Google Sheets with the AI-generated content.',
       technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API'],
-      caseStudyUrl: 'projects/rmt-automation',
+      caseStudyUrl: 'projects/rtm-automation',
       status: 'completed',
       featured: true,
       highlights: [

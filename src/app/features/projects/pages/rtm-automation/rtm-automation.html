@@ -1,0 +1,655 @@
+<div class="rtm-showcase">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="project-title">RTM Automation</h1>
+      <p class="project-subtitle">Automated Requirements Traceability Matrix Generation</p>
+      <p class="project-tagline">A Case Study in AI-Powered Testing Documentation</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">Automation Engineer / Solution Architect</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Platform</span>
+          <span class="meta-value">n8n Workflow Automation</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tech Stack</span>
+          <span class="meta-value">n8n, DeepSeek AI, Asana API, Google Workspace APIs</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Impact</span>
+          <span class="meta-value highlight">94% Reduction in Manual Effort</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Summary -->
+  <section class="content-section summary-section">
+    <div class="container">
+      <h2 class="section-title">Executive Summary</h2>
+      <p class="section-description">
+        This case study examines an n8n workflow implementation that automates the generation of Requirements Traceability Matrices (RTM) and test case documentation from Asana project management data. The solution leverages AI-powered data extraction, Google Workspace integration, and intelligent document generation to transform manual QA processes into streamlined, automated workflows.
+      </p>
+
+      <div class="highlight-stats">
+        <div class="stat-item">
+          <span class="stat-number">77</span>
+          <span class="stat-label">Interconnected Nodes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">94%</span>
+          <span class="stat-label">Time Savings</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Documentation Consistency</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">&lt;2%</span>
+          <span class="stat-label">Data Entry Errors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Challenge -->
+  <section class="content-section challenge-section">
+    <div class="container">
+      <h2 class="section-title">The Challenge</h2>
+      <p class="intro-text">Quality assurance teams faced significant productivity challenges with manual Requirements Traceability Matrix creation. Each task required QA engineers to manually extract data from Asana, compile test cases, document dependencies, and maintain traceability across multiple platforms.</p>
+
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12,6 12,12 16,14"></polyline>
+            </svg>
+          </div>
+          <h3>Time-Consuming Data Extraction</h3>
+          <p>Manual data extraction from Asana tasks consumed 3-5 hours per task, creating significant bottlenecks in the testing lifecycle.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14,2 14,8 20,8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10,9 9,9 8,9"></polyline>
+            </svg>
+          </div>
+          <h3>Inconsistent Documentation</h3>
+          <p>Different documentation formats across team members led to confusion, reduced quality, and difficulty in knowledge transfer.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+            </svg>
+          </div>
+          <h3>Traceability Gaps</h3>
+          <p>Difficulty maintaining traceability between requirements, subtasks, and test cases resulted in incomplete coverage and audit failures.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+          </div>
+          <h3>Limited Scalability</h3>
+          <p>No standardized process for capturing dependencies and comments, making it impossible to scale as project complexity increased.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Error-Prone Process</h3>
+          <p>Manual processes led to 15-20% data entry errors, causing rework and reducing confidence in test documentation accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution -->
+  <section class="content-section solution-section">
+    <div class="container">
+      <h2 class="section-title">The Solution</h2>
+      <p class="intro-text">
+        The implemented n8n workflow creates a comprehensive automation pipeline that transforms Asana tasks into complete RTM documentation. The solution integrates multiple technologies including DeepSeek AI for intelligent data processing, Google Sheets for structured data storage, and Google Docs for formatted documentation output.
+      </p>
+
+      <div class="screenshot-grid single">
+        <div class="screenshot-item large">
+          <img src="/images/projects/rtm-automation/fig-1.png" alt="High-Level Workflow Overview">
+          <p class="screenshot-caption">Figure 1: High-Level Workflow Overview - RTM Automation Pipeline</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture -->
+  <section class="content-section architecture-section">
+    <div class="container">
+      <h2 class="section-title">Technical Architecture</h2>
+      <p class="intro-text">
+        The workflow architecture consists of 77 interconnected nodes organized into five distinct phases: data collection, AI processing, document generation, test case creation, and finalization. This modular design enables parallel processing where appropriate while maintaining data integrity through careful sequencing and error handling.
+      </p>
+      <!-- System Integration -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">System Integration Overview</h3>
+        <p class="subsection-description">
+          The workflow integrates five major technology platforms to create a seamless automation pipeline. Each platform serves a specific purpose in the data flow, from source extraction to final document delivery.
+        </p>
+
+        <div class="screenshot-grid single">
+          <div class="screenshot-item large">
+            <img src="/images/projects/rtm-automation/fig-2.png" alt="System Integration & Data Flow">
+            <p class="screenshot-caption">Figure 2: System Integration & Data Flow Architecture</p>
+          </div>
+        </div>
+
+        <div class="tech-components">
+          <h4 class="feature-heading">Core Components</h4>
+          <div class="tech-table">
+            <div class="tech-row">
+              <div class="tech-category">Asana Integration</div>
+              <div class="tech-values">Retrieves task details, subtasks, dependencies, and comments via OAuth2 API</div>
+            </div>
+            <div class="tech-row">
+              <div class="tech-category">DeepSeek AI</div>
+              <div class="tech-values">Processes raw JSON data using structured information extraction to identify key fields like names, dates, URLs, and text content</div>
+            </div>
+            <div class="tech-row">
+              <div class="tech-category">Google Sheets</div>
+              <div class="tech-values">Stores structured RTM data including test cases, summaries, and ticket information in dynamically created sheets</div>
+            </div>
+            <div class="tech-row">
+              <div class="tech-category">Google Docs</div>
+              <div class="tech-values">Generates formatted RTM documentation with proper structure and traceability links</div>
+            </div>
+            <div class="tech-row">
+              <div class="tech-category">Google Drive</div>
+              <div class="tech-values">Manages test case templates and provides centralized document storage and organization</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Complete Workflow -->
+      <div class="feature-subsection">
+        <h3 class="subsection-title">Complete Workflow Architecture</h3>
+        <p class="subsection-description">
+          The following diagram illustrates the complete technical architecture with all 77 nodes organized into functional sections. This comprehensive view shows how data flows through collection, AI processing, document generation, test case creation, and finalization phases.
+        </p>
+
+        <div class="screenshot-grid single">
+          <div class="screenshot-item large">
+            <img src="/images/projects/rtm-automation/fig-3.png" alt="Complete n8n Workflow Architecture">
+            <p class="screenshot-caption">Figure 3: Complete n8n Workflow Architecture - 77 Interconnected Nodes</p>
+          </div>
+        </div>
+
+        <div class="workflow-legend">
+          <h4 class="feature-heading">Workflow Node Types</h4>
+          <div class="legend-grid">
+            <div class="legend-item asana">
+              <span class="legend-color"></span>
+              <span class="legend-label">Asana Operations</span>
+            </div>
+            <div class="legend-item ai">
+              <span class="legend-color"></span>
+              <span class="legend-label">AI Processing</span>
+            </div>
+            <div class="legend-item google">
+              <span class="legend-color"></span>
+              <span class="legend-label">Google Workspace</span>
+            </div>
+            <div class="legend-item data">
+              <span class="legend-color"></span>
+              <span class="legend-label">Data Processing</span>
+            </div>
+            <div class="legend-item control">
+              <span class="legend-color"></span>
+              <span class="legend-label">Control Flow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Process Flow -->
+  <section class="content-section workflow-section">
+    <div class="container">
+      <h2 class="section-title">Workflow Process Flow</h2>
+      <p class="intro-text">
+        The workflow executes through five distinct phases, each handling specific aspects of the RTM generation process. The following sections detail each phase with visual representations of the data flow and node interactions.
+      </p>
+
+      <!-- Phase 1 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 1</span>
+          <h3 class="subsection-title">Data Collection from Asana</h3>
+        </div>
+        <p class="subsection-description">
+          The data collection phase retrieves all necessary information from Asana using OAuth2 authenticated API calls. This includes the primary task details, all associated subtasks, task dependencies, and discussion history through comments and stories.
+        </p>
+
+        <div class="screenshot-grid single">
+          <div class="screenshot-item">
+            <img src="/images/projects/rtm-automation/fig-4.png" alt="Phase 1 - Data Collection">
+            <p class="screenshot-caption">Figure 4: Phase 1 - Data Collection from Asana</p>
+          </div>
+        </div>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Key Operations</h4>
+          <ul>
+            <li>Workflow triggers on Asana task update or manual execution</li>
+            <li>Retrieves complete task details including title, description, due dates, and assignees</li>
+            <li>Fetches all associated subtasks with their complete metadata</li>
+            <li>Extracts task dependencies to maintain requirement relationships</li>
+            <li>Collects all comments and discussions for context preservation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 2</span>
+          <h3 class="subsection-title">AI-Powered Data Processing</h3>
+        </div>
+        <p class="subsection-description">
+          DeepSeek AI processes the raw JSON data through structured information extraction nodes. Each data type (tasks, subtasks, dependencies, comments) is processed through dedicated extraction nodes with predefined schemas to ensure consistent data structure.
+        </p>
+
+        <div class="screenshot-grid single">
+          <div class="screenshot-item">
+            <img src="/images/projects/rtm-automation/fig-5.png" alt="Phase 2 - AI Processing">
+            <p class="screenshot-caption">Figure 5: Phase 2 - AI-Powered Data Processing Pipeline</p>
+          </div>
+        </div>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Processing Steps</h4>
+          <ul>
+            <li>DeepSeek AI processes raw JSON data through structured extraction nodes</li>
+            <li>Extracts specific fields using defined schemas for name, URL, date, and text properties</li>
+            <li>String escaper nodes handle special characters to prevent data corruption</li>
+            <li>Aggregation nodes compile related data points for comprehensive documentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 3</span>
+          <h3 class="subsection-title">Document Generation</h3>
+        </div>
+        <p class="subsection-description">
+          The document generation phase creates structured data repositories in Google Sheets and formatted RTM documents in Google Docs. Each document is dynamically named based on the task and populated with the extracted and processed data.
+        </p>
+
+        <div class="screenshot-grid single">
+          <div class="screenshot-item">
+            <img src="/images/projects/rtm-automation/fig-6.png" alt="Phase 3 - Document Generation">
+            <p class="screenshot-caption">Figure 6: Phase 3 - Document Generation Flow</p>
+          </div>
+        </div>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Generation Process</h4>
+          <ul>
+            <li>Creates Google Sheets with task-specific tabs for raw data storage</li>
+            <li>Appends structured data including titles, descriptions, dates, subtasks, dependencies, and comments</li>
+            <li>Generates Google Docs RTM documents with formatted sections and proper hierarchy</li>
+            <li>Updates documents with AI-generated content using structured output parsers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 4</span>
+          <h3 class="subsection-title">Test Case Generation</h3>
+        </div>
+        <p class="subsection-description">
+          The test case generation phase leverages AI agents to create comprehensive test documentation. This includes generating test summaries and detailed test cases based on the task requirements, which are then populated into spreadsheet templates.
+        </p>
+
+        <div class="screenshot-grid single">
+          <div class="screenshot-item">
+            <img src="/images/projects/rtm-automation/fig-7.png" alt="Phase 4 - Test Case Generation">
+            <p class="screenshot-caption">Figure 7: Phase 4 - Test Case Generation Pipeline</p>
+          </div>
+        </div>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Test Generation Process</h4>
+          <ul>
+            <li>Creates test case templates from Google Drive templates</li>
+            <li>AI agents generate test summary rows based on task requirements</li>
+            <li>AI creates detailed test case rows with steps and expected results</li>
+            <li>Appends ticket information to tracking spreadsheet</li>
+            <li>Populates test case template with generated test cases</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 5 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 5</span>
+          <h3 class="subsection-title">Finalization & Feedback Loop</h3>
+        </div>
+        <p class="subsection-description">
+          The final phase ensures quality control and creates a feedback loop back to the project management system for continuous improvement.
+        </p>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Finalization Steps</h4>
+          <ul>
+            <li>AI generates RTM subtask details for quality review</li>
+            <li>Creates Asana subtasks for QA review and validation</li>
+            <li>Updates master tracking spreadsheet with links to all generated artifacts</li>
+            <li>Wait nodes ensure proper sequencing and data consistency across operations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Highlights -->
+  <section class="content-section technical-section">
+    <div class="container">
+      <h2 class="section-title">Technical Highlights</h2>
+
+      <div class="innovations-grid">
+        <div class="innovation-card">
+          <div class="innovation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+              <path d="M12 2a10 10 0 0 1 10 10"></path>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </div>
+          <h3>AI-Powered Information Extraction</h3>
+          <p>Leverages DeepSeek AI's structured information extraction capabilities to intelligently parse unstructured JSON data. Rather than relying on rigid data mapping, the AI model identifies and extracts relevant fields based on semantic understanding, making the solution resilient to schema variations and capable of handling complex nested data structures.</p>
+        </div>
+
+        <div class="innovation-card">
+          <div class="innovation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14,2 14,8 20,8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Dynamic Document Generation</h3>
+          <p>Creates multiple document types including Google Sheets for data storage, Google Docs for formatted RTM documents, and test case templates. Each document is dynamically generated based on the task name and populated with extracted data, ensuring consistency while maintaining flexibility for different project structures.</p>
+        </div>
+
+        <div class="innovation-card">
+          <div class="innovation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Error Handling & Data Integrity</h3>
+          <p>Multiple string escaper nodes throughout the workflow ensure special characters are properly handled, preventing data corruption in JSON payloads and API requests. Conditional branches check for empty data sets, and wait nodes ensure proper sequencing when dealing with asynchronous operations across multiple platforms.</p>
+        </div>
+
+        <div class="innovation-card">
+          <div class="innovation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <h3>Comprehensive Data Aggregation</h3>
+          <p>Includes sophisticated aggregation logic that combines data from multiple sources (tasks, subtasks, dependencies, comments) into cohesive documentation. This ensures that all related information is properly linked and presented together, maintaining the context and relationships between different elements of the project.</p>
+        </div>
+      </div>
+
+      <!-- Workflow Complexity Metrics -->
+      <div class="metrics-section">
+        <h3 class="subsection-title">Workflow Complexity Metrics</h3>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">77</span>
+            <span class="metric-label">Total Nodes</span>
+            <span class="metric-description">Interconnected automation components</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">7</span>
+            <span class="metric-label">AI Operations</span>
+            <span class="metric-description">DeepSeek AI model instances</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">5</span>
+            <span class="metric-label">Extractors</span>
+            <span class="metric-description">Specialized extraction nodes with custom schemas</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">6</span>
+            <span class="metric-label">Data Processors</span>
+            <span class="metric-description">Code nodes for string escaping and transformation</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">15+</span>
+            <span class="metric-label">API Integrations</span>
+            <span class="metric-description">HTTP requests to Google APIs and Asana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results and Impact -->
+  <section class="content-section results-section">
+    <div class="container">
+      <h2 class="section-title">Results & Impact</h2>
+
+      <!-- Quantitative Results -->
+      <div class="results-comparison">
+        <h3 class="subsection-title">Quantitative Improvements</h3>
+        <div class="comparison-table">
+          <div class="comparison-header">
+            <div class="comparison-metric">Metric</div>
+            <div class="comparison-before">Before</div>
+            <div class="comparison-after">After</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">RTM Creation Time</div>
+            <div class="comparison-before">3-5 hours</div>
+            <div class="comparison-after highlight">5-10 minutes</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">Documentation Consistency</div>
+            <div class="comparison-before">Variable</div>
+            <div class="comparison-after highlight">100%</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">Data Entry Errors</div>
+            <div class="comparison-before">15-20%</div>
+            <div class="comparison-after highlight">&lt;2%</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">Time Savings per Task</div>
+            <div class="comparison-before">-</div>
+            <div class="comparison-after highlight">94%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualitative Benefits -->
+      <div class="benefits-grid">
+        <div class="benefit-category">
+          <h3 class="benefit-title">Operational Benefits</h3>
+          <ul class="benefit-list">
+            <li>
+              <strong>Focus on Testing:</strong>
+              <span>QA engineers can focus on actual testing rather than documentation overhead</span>
+            </li>
+            <li>
+              <strong>Standardization:</strong>
+              <span>Standardized documentation format improves team collaboration and knowledge transfer</span>
+            </li>
+            <li>
+              <strong>Audit Ready:</strong>
+              <span>Complete traceability from requirements to test cases reduces audit preparation time</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="benefit-category">
+          <h3 class="benefit-title">Quality Benefits</h3>
+          <ul class="benefit-list">
+            <li>
+              <strong>Knowledge Preservation:</strong>
+              <span>Automatic capture of dependencies and comments preserves institutional knowledge</span>
+            </li>
+            <li>
+              <strong>Scalability:</strong>
+              <span>Scalable solution handles increasing project complexity without additional manual effort</span>
+            </li>
+            <li>
+              <strong>Consistency:</strong>
+              <span>Eliminates human variation in documentation quality and format</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implementation -->
+  <section class="content-section implementation-section">
+    <div class="container">
+      <h2 class="section-title">Implementation Details</h2>
+
+      <div class="implementation-grid">
+        <div class="implementation-card">
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>n8n workflow automation platform (self-hosted or cloud)</li>
+            <li>Asana workspace with OAuth2 API access</li>
+            <li>Google Workspace account with Sheets, Docs, and Drive API enabled</li>
+            <li>DeepSeek AI API credentials</li>
+            <li>Master tracking spreadsheet for document links</li>
+          </ul>
+        </div>
+
+        <div class="implementation-card">
+          <h3>Configuration Requirements</h3>
+          <ul>
+            <li>OAuth2 credentials configured for Asana and Google services</li>
+            <li>Spreadsheet IDs and folder structures defined for document organization</li>
+            <li>Template structures established for test case and RTM documents</li>
+            <li>AI extraction schemas configured for consistent data parsing</li>
+            <li>Workflow execution permissions and error notification settings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Enhancements -->
+  <section class="content-section future-section">
+    <div class="container">
+      <h2 class="section-title">Future Enhancement Opportunities</h2>
+
+      <div class="enhancements-grid">
+        <div class="enhancement-item">
+          <span class="enhancement-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+          </span>
+          <span class="enhancement-text">Integration with additional project management tools like Jira or Monday.com</span>
+        </div>
+        <div class="enhancement-item">
+          <span class="enhancement-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </span>
+          <span class="enhancement-text">Automated test case generation from acceptance criteria using advanced AI models</span>
+        </div>
+        <div class="enhancement-item">
+          <span class="enhancement-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+            </svg>
+          </span>
+          <span class="enhancement-text">Real-time synchronization between Asana updates and RTM documents</span>
+        </div>
+        <div class="enhancement-item">
+          <span class="enhancement-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </span>
+          <span class="enhancement-text">Dashboard visualization of testing coverage and traceability metrics</span>
+        </div>
+        <div class="enhancement-item">
+          <span class="enhancement-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </span>
+          <span class="enhancement-text">Version control integration for RTM document history tracking</span>
+        </div>
+        <div class="enhancement-item">
+          <span class="enhancement-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+            </svg>
+          </span>
+          <span class="enhancement-text">Machine learning models for predicting test execution times and resource requirements</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="content-section conclusion-section">
+    <div class="container">
+      <h2 class="section-title">Conclusion</h2>
+      <p class="conclusion-text">
+        This n8n workflow demonstrates how intelligent automation can transform traditional QA processes. By combining AI-powered data extraction, multi-platform integration, and automated document generation, the solution achieves a <strong>94% reduction in manual effort</strong> while improving documentation quality and consistency. The workflow's 77 interconnected nodes represent a scalable, maintainable approach to requirements traceability that can adapt to evolving project needs and team structures.
+      </p>
+      <p class="conclusion-text">
+        The success of this implementation highlights the value of no-code/low-code automation platforms in solving complex enterprise challenges. By leveraging existing tools and APIs through visual workflow design, organizations can achieve significant process improvements without extensive custom development efforts. The integration of AI capabilities through DeepSeek further enhances the solution's ability to handle unstructured data and generate intelligent outputs.
+      </p>
+      <p class="conclusion-text highlight-text">
+        As organizations continue to adopt agile methodologies and increase their software delivery velocity, automated RTM generation becomes not just a productivity enhancement but a necessity for maintaining quality standards at scale.
+      </p>
+    </div>
+  </section>
+</div>

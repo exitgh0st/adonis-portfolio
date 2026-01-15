@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RmtAutomation } from './rmt-automation';
+import { RtmAutomation } from './rtm-automation';
 
-describe('RmtAutomation', () => {
-  let component: RmtAutomation;
-  let fixture: ComponentFixture<RmtAutomation>;
+describe('RtmAutomation', () => {
+  let component: RtmAutomation;
+  let fixture: ComponentFixture<RtmAutomation>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RmtAutomation]
+      imports: [RtmAutomation]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RmtAutomation);
+    fixture = TestBed.createComponent(RtmAutomation);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
