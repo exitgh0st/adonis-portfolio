@@ -1,13 +1,13 @@
 export type SkillCategory =
-  | 'Frontend'
-  | 'Backend'
+  | 'AI & Automation'
+  | 'Programming'
+  | 'Web Development'
   | 'Database'
+  | 'API Integration'
+  | 'Tools & Platforms'
   | 'Mobile Development'
   | 'Game Development'
-  | 'Cloud & DevOps'
-  | 'AI & Automation'
-  | 'APIs & Integration'
-  | 'Security & Architecture';
+  | 'Methodologies';
 
 export interface Skill {
   name: string;

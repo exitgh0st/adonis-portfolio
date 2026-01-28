@@ -19,6 +19,25 @@ export class PortfolioDataService {
 
   private experiencesData = signal<Experience[]>([
     {
+      id: 'exp-0',
+      company: 'Freelance',
+      position: 'n8n Automation Specialist & Developer',
+      startDate: 'Nov. 2025',
+      endDate: null,
+      location: 'Remote',
+      description: 'Design and implement complex n8n workflows for client automation projects across project management, documentation, and business process optimization.',
+      responsibilities: [
+        'Built production-grade 77-node workflow automating Requirements Traceability Matrix (RTM) generation, reducing manual documentation time from 3-5 hours to 5-10 minutes per task (94% reduction)',
+        'Integrated AI agents (DeepSeek LLM) with Asana API, Google Sheets API, Google Docs API, and Google Drive API for intelligent data extraction, transformation, and automated document generation',
+        'Implemented complex workflow orchestration with conditional branching, error handling, retry logic, and failure notifications across multiple API platforms',
+        'Designed and configured OAuth2 authentication, webhook integrations, and REST API connections for seamless multi-platform data synchronization',
+        'Processed and validated JSON data using custom JavaScript transformations, ensuring data integrity and preventing duplicate operations through idempotent workflow design',
+        'Created automated test case generation system using AI agents, populating Google Sheets with structured data and generating professional documentation with proper traceability links'
+      ],
+      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API', 'OAuth2', 'JavaScript'],
+      type: 'work'
+    },
+    {
       id: 'exp-1',
       company: 'Blockovate',
       position: 'Web3 Community Moderator',
@@ -27,10 +46,11 @@ export class PortfolioDataService {
       location: 'Remote',
       description: 'Manage and moderate Web3 community across multiple platforms, ensuring healthy engagement and platform safety.',
       responsibilities: [
-        'Enforce community guidelines and manage automated moderation bots across Discord and Telegram',
-        'Provide timely support through Livechat, direct messages, and community channels',
-        'Coordinate with technical and marketing teams to resolve issues and support campaigns',
-        'Monitor community sentiment and escalate feedback to relevant stakeholders'
+        'Utilize and manage moderation bots to automate rule enforcement and enhance community safety',
+        'Provide personalized 1-on-1 assistance via Livechat and direct messages to resolve member issues effectively',
+        'Coordinate with the technical team to troubleshoot and resolve user-reported bugs and platform concerns',
+        'Monitor community sentiment and escalate critical feedback or trends to project stakeholders',
+        'Support marketing campaigns and announcements by engaging with the community and boosting visibility'
       ],
       technologies: ['Discord', 'Telegram', 'Web3', 'Community Management'],
       type: 'work'
@@ -71,9 +91,10 @@ export class PortfolioDataService {
       location: 'Binondo, Manila',
       description: 'Developed cross-platform web applications and collaborated on building in-house libraries.',
       responsibilities: [
-        'Built cross-platform web applications using Ionic and Angular frameworks',
-        'Collaborated with senior developers to create reusable in-house libraries',
-        'Implemented REST API best practices across library development'
+        'Developed cross platform web applications using Ionic framework',
+        'Built RESTful APIs and backend services following API design best practices',
+        'Collaborated with senior developers to create reusable in-house component libraries and shared modules',
+        'Implemented responsive UI components and integrated with backend APIs for data synchronization'
       ],
       technologies: ['Ionic', 'Angular', 'TypeScript', 'REST API'],
       type: 'work'
@@ -85,11 +106,12 @@ export class PortfolioDataService {
       startDate: 'Jul. 2017',
       endDate: 'Oct. 2019',
       location: 'Makati, Metro Manila',
-      description: 'Developed mobile game features, optimized performance, and mentored team members in game development.',
+      description: 'Developed and maintained multiple mobile games using Unity and Android Studio, contributing to titles with over 10 million downloads.',
       responsibilities: [
-        'Implemented game features, mechanics, and collaborated with designers and producers',
-        'Optimized app performance through strategic code refactoring and best practices',
-        'Mentored team members and created comprehensive documentation wikis'
+        'Implemented game features and collaborated with game designers and producers in developing game mechanics',
+        'Debugged and resolved critical issues across production builds, ensuring stable releases and high user retention',
+        'Optimized app performance by implementing Binary Search Tree algorithm for word validation, reducing loading time from 3-5 seconds to less than 1 second (70-80% improvement)',
+        'Mentored teammates during development and created detailed technical documentation'
       ],
       technologies: ['Unity', 'C#', 'Android Studio', 'Java', 'Xcode', 'Objective-C'],
       type: 'work'
@@ -108,68 +130,67 @@ export class PortfolioDataService {
   ]);
 
   private skillsData = signal<Skill[]>([
-    // Frontend (6 skills)
-    { name: 'Angular', category: 'Frontend' },
-    { name: 'TypeScript', category: 'Frontend' },
-    { name: 'HTML/CSS', category: 'Frontend' },
-    { name: 'SCSS', category: 'Frontend' },
-    { name: 'RxJS', category: 'Frontend' },
-    { name: 'Angular Material', category: 'Frontend' },
-  
-    // Backend (6 skills)
-    { name: 'Node.js', category: 'Backend' },
-    { name: 'Express', category: 'Backend' },
-    { name: 'REST API', category: 'Backend' },
-    { name: 'Prisma ORM', category: 'Backend' },
-    { name: 'JWT', category: 'Backend' },
-    { name: 'JavaScript', category: 'Backend' },
-  
-    // Database (5 skills)
-    { name: 'PostgreSQL', category: 'Database' },
-    { name: 'MySQL', category: 'Database' },
-    { name: 'Liquibase', category: 'Database' },
-    { name: 'Database Design', category: 'Database' },
-    { name: 'SQL', category: 'Database' },
-  
-    // Mobile Development (5 skills)
-    { name: 'Ionic', category: 'Mobile Development' },
-    { name: 'Android Studio', category: 'Mobile Development' },
-    { name: 'Java', category: 'Mobile Development' },
-    { name: 'Xcode', category: 'Mobile Development' },
-    { name: 'Objective-C', category: 'Mobile Development' },
-  
-    // Game Development (5 skills)
-    { name: 'Unity', category: 'Game Development' },
-    { name: 'C#', category: 'Game Development' },
-    { name: 'Game Mechanics', category: 'Game Development' },
-    { name: 'Performance Optimization', category: 'Game Development' },
-  
-    // Cloud & DevOps (5 skills)
-    { name: 'Vercel', category: 'Cloud & DevOps' },
-    { name: 'Render', category: 'Cloud & DevOps' },
-    { name: 'Cloudinary', category: 'Cloud & DevOps' },
-    { name: 'Git', category: 'Cloud & DevOps' },
-    { name: 'CI/CD', category: 'Cloud & DevOps' },
-  
-    // AI & Automation (5 skills)
+    // AI & Automation (matching resume priority)
     { name: 'n8n', category: 'AI & Automation' },
     { name: 'AI Agents', category: 'AI & Automation' },
+    { name: 'DeepSeek LLM', category: 'AI & Automation' },
     { name: 'Claude Code', category: 'AI & Automation' },
-    { name: 'ChatGPT', category: 'AI & Automation' },
-    { name: 'Workflow Automation', category: 'AI & Automation' },
-  
-    // APIs & Integration (5 skills)
-    { name: 'Asana API', category: 'APIs & Integration' },
-    { name: 'Google APIs', category: 'APIs & Integration' },
-    { name: 'Third-party Integration', category: 'APIs & Integration' },
-    { name: 'Postman', category: 'APIs & Integration' },
-  
-    // Security & Architecture (5 skills)
-    { name: 'Authentication', category: 'Security & Architecture' },
-    { name: 'RBAC', category: 'Security & Architecture' },
-    { name: 'Route Guards', category: 'Security & Architecture' },
-    { name: 'Zod Validation', category: 'Security & Architecture' },
-    { name: 'SSR', category: 'Security & Architecture' },
+    { name: 'Cursor', category: 'AI & Automation' },
+    { name: 'Workflow Orchestration', category: 'AI & Automation' },
+
+    // Programming & Development
+    { name: 'JavaScript', category: 'Programming' },
+    { name: 'TypeScript', category: 'Programming' },
+    { name: 'C#', category: 'Programming' },
+    { name: 'Java', category: 'Programming' },
+    { name: 'Objective-C', category: 'Programming' },
+    { name: 'Python', category: 'Programming' },
+    { name: 'HTML/CSS', category: 'Programming' },
+    { name: 'Solidity', category: 'Programming' },
+
+    // Web Development
+    { name: 'Angular', category: 'Web Development' },
+    { name: 'Node.js', category: 'Web Development' },
+    { name: 'Express', category: 'Web Development' },
+    { name: 'REST API', category: 'Web Development' },
+    { name: 'Prisma ORM', category: 'Web Development' },
+    { name: 'Liquibase', category: 'Web Development' },
+    { name: 'OAuth2', category: 'Web Development' },
+    { name: 'JWT', category: 'Web Development' },
+
+    // Database
+    { name: 'PostgreSQL', category: 'Database' },
+    { name: 'MySQL', category: 'Database' },
+    { name: 'SQL Optimization', category: 'Database' },
+    { name: 'Database Design', category: 'Database' },
+
+    // API Integration
+    { name: 'Asana API', category: 'API Integration' },
+    { name: 'Postman', category: 'API Integration' },
+    { name: 'Google Workspace APIs', category: 'API Integration' },
+    { name: 'JSON Transformation', category: 'API Integration' },
+
+    // Tools & Platforms
+    { name: 'Docker', category: 'Tools & Platforms' },
+    { name: 'Git', category: 'Tools & Platforms' },
+    { name: 'Vercel', category: 'Tools & Platforms' },
+    { name: 'Render', category: 'Tools & Platforms' },
+    { name: 'Discord', category: 'Tools & Platforms' },
+    { name: 'Telegram', category: 'Tools & Platforms' },
+
+    // Mobile Development
+    { name: 'Ionic', category: 'Mobile Development' },
+    { name: 'Android Studio', category: 'Mobile Development' },
+    { name: 'Xcode', category: 'Mobile Development' },
+
+    // Game Development
+    { name: 'Unity', category: 'Game Development' },
+    { name: 'Game Mechanics', category: 'Game Development' },
+    { name: 'Performance Optimization', category: 'Game Development' },
+
+    // Methodologies
+    { name: 'Agile (Scrum)', category: 'Methodologies' },
+    { name: 'Waterfall', category: 'Methodologies' },
   ]);
 
   private projectsData = signal<Project[]>([
