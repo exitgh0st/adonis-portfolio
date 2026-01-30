@@ -9,9 +9,9 @@
         </svg>
         <span>Back</span>
       </button>
-      <h1 class="project-title">RTM Automation</h1>
-      <p class="project-subtitle">Automated Requirements Traceability Matrix Generation</p>
-      <p class="project-tagline">A Case Study in AI-Powered Testing Documentation</p>
+      <h1 class="project-title">RTM Automation with RAG</h1>
+      <p class="project-subtitle">Automated Requirements Traceability Matrix Generation with RAG</p>
+      <p class="project-tagline">A Case Study in AI-Powered Testing Documentation with Vector Store Integration</p>
 
       <div class="project-meta">
         <div class="meta-item">
@@ -24,11 +24,11 @@
         </div>
         <div class="meta-item">
           <span class="meta-label">Tech Stack</span>
-          <span class="meta-value">n8n, DeepSeek AI, Asana API, Google Workspace APIs</span>
+          <span class="meta-value">n8n, DeepSeek AI, OpenAI Embeddings, Pinecone, Asana API, Google Workspace APIs</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Impact</span>
-          <span class="meta-value highlight">94% Reduction in Manual Effort</span>
+          <span class="meta-value highlight">95% Reduction in Manual Effort</span>
         </div>
       </div>
     </div>
@@ -39,16 +39,16 @@
     <div class="container">
       <h2 class="section-title">Executive Summary</h2>
       <p class="section-description">
-        This case study examines an n8n workflow implementation that automates the generation of Requirements Traceability Matrices (RTM) and test case documentation from Asana project management data. The solution leverages AI-powered data extraction, Google Workspace integration, and intelligent document generation to transform manual QA processes into streamlined, automated workflows.
+        This case study examines an n8n workflow implementation that automates the generation of Requirements Traceability Matrices (RTM) and test case documentation using Retrieval Augmented Generation (RAG). The solution leverages DeepSeek AI for intelligent content generation, OpenAI Embeddings with Pinecone vector databases for context retrieval, and hash-based change detection for intelligent caching. By integrating 56 interconnected nodes across multiple platforms, the workflow transforms manual QA processes into a streamlined, context-aware automation pipeline.
       </p>
 
       <div class="highlight-stats">
         <div class="stat-item">
-          <span class="stat-number">77</span>
+          <span class="stat-number">56</span>
           <span class="stat-label">Interconnected Nodes</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">94%</span>
+          <span class="stat-number">95%</span>
           <span class="stat-label">Time Savings</span>
         </div>
         <div class="stat-item">
@@ -56,7 +56,7 @@
           <span class="stat-label">Documentation Consistency</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">&lt;2%</span>
+          <span class="stat-number">&lt;1%</span>
           <span class="stat-label">Data Entry Errors</span>
         </div>
       </div>
@@ -126,6 +126,30 @@
           <h3>Error-Prone Process</h3>
           <p>Manual processes led to 15-20% data entry errors, causing rework and reducing confidence in test documentation accuracy.</p>
         </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+              <line x1="7" y1="2" x2="7" y2="22"></line>
+              <line x1="17" y1="2" x2="17" y2="22"></line>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+            </svg>
+          </div>
+          <h3>Redundant Processing</h3>
+          <p>Unchanged tasks were reprocessed every time, wasting compute resources and API calls without any mechanism to detect or skip unchanged content.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3>Lost Context</h3>
+          <p>Previous documentation efforts and historical context were not preserved or leveraged, leading to inconsistent outputs and lost institutional knowledge.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -135,13 +159,61 @@
     <div class="container">
       <h2 class="section-title">The Solution</h2>
       <p class="intro-text">
-        The implemented n8n workflow creates a comprehensive automation pipeline that transforms Asana tasks into complete RTM documentation. The solution integrates multiple technologies including DeepSeek AI for intelligent data processing, Google Sheets for structured data storage, and Google Docs for formatted documentation output.
+        The implemented n8n workflow creates a comprehensive automation pipeline that transforms Asana tasks into complete RTM documentation using Retrieval Augmented Generation (RAG). The solution integrates DeepSeek AI for intelligent content generation, OpenAI Embeddings with Pinecone vector databases for context-aware retrieval, and SHA-256 hash-based change detection to eliminate redundant processing.
       </p>
 
-      <div class="screenshot-grid single">
-        <div class="screenshot-item large">
-          <img src="/images/projects/rtm-automation/fig-1.png" alt="High-Level Workflow Overview">
-          <p class="screenshot-caption">Figure 1: High-Level Workflow Overview - RTM Automation Pipeline</p>
+      <!-- Inline Architecture Diagram -->
+      <div class="architecture-diagram">
+        <h3 class="diagram-title">System Architecture Overview</h3>
+        <div class="diagram-container">
+          <div class="diagram-row">
+            <div class="diagram-node source">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              </div>
+              <span class="node-label">Asana</span>
+              <span class="node-desc">Task Data Source</span>
+            </div>
+            <div class="diagram-arrow"></div>
+            <div class="diagram-node processing">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              </div>
+              <span class="node-label">n8n Engine</span>
+              <span class="node-desc">56-Node Orchestrator</span>
+            </div>
+            <div class="diagram-arrow"></div>
+            <div class="diagram-node ai">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              </div>
+              <span class="node-label">DeepSeek AI</span>
+              <span class="node-desc">RTM Generation</span>
+            </div>
+          </div>
+          <div class="diagram-row secondary">
+            <div class="diagram-node vector">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <span class="node-label">Pinecone</span>
+              <span class="node-desc">Vector Store</span>
+            </div>
+            <div class="diagram-node embeddings">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+              </div>
+              <span class="node-label">OpenAI Embeddings</span>
+              <span class="node-desc">Text Vectorization</span>
+            </div>
+            <div class="diagram-node output">
+              <div class="node-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline></svg>
+              </div>
+              <span class="node-label">Google Workspace</span>
+              <span class="node-desc">Docs, Sheets, Drive</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -152,21 +224,15 @@
     <div class="container">
       <h2 class="section-title">Technical Architecture</h2>
       <p class="intro-text">
-        The workflow architecture consists of 77 interconnected nodes organized into five distinct phases: data collection, AI processing, document generation, test case creation, and finalization. This modular design enables parallel processing where appropriate while maintaining data integrity through careful sequencing and error handling.
+        The workflow architecture consists of 56 interconnected nodes organized into seven distinct phases: configuration, data collection, vector store preparation, context retrieval, test case generation, Asana integration, and finalization. The modular design leverages RAG for context-aware generation while hash-based change detection ensures only modified tasks are reprocessed.
       </p>
+
       <!-- System Integration -->
       <div class="feature-subsection">
         <h3 class="subsection-title">System Integration Overview</h3>
         <p class="subsection-description">
-          The workflow integrates five major technology platforms to create a seamless automation pipeline. Each platform serves a specific purpose in the data flow, from source extraction to final document delivery.
+          The workflow integrates six major technology platforms to create a seamless, context-aware automation pipeline. Each platform serves a specific purpose in the data flow, from source extraction through vector-based context retrieval to final document delivery.
         </p>
-
-        <div class="screenshot-grid single">
-          <div class="screenshot-item large">
-            <img src="/images/projects/rtm-automation/fig-2.png" alt="System Integration & Data Flow">
-            <p class="screenshot-caption">Figure 2: System Integration & Data Flow Architecture</p>
-          </div>
-        </div>
 
         <div class="tech-components">
           <h4 class="feature-heading">Core Components</h4>
@@ -177,11 +243,19 @@
             </div>
             <div class="tech-row">
               <div class="tech-category">DeepSeek AI</div>
-              <div class="tech-values">Processes raw JSON data using structured information extraction to identify key fields like names, dates, URLs, and text content</div>
+              <div class="tech-values">Generates RTM content and test cases using RAG-augmented prompts with retrieved context from vector store for consistent, context-aware outputs</div>
+            </div>
+            <div class="tech-row">
+              <div class="tech-category">Pinecone Vector Store</div>
+              <div class="tech-values">Stores and retrieves document embeddings for RAG context, enabling semantic search across previously generated documentation</div>
+            </div>
+            <div class="tech-row">
+              <div class="tech-category">OpenAI Embeddings</div>
+              <div class="tech-values">Converts task content into vector representations for storage in Pinecone, enabling similarity-based context retrieval</div>
             </div>
             <div class="tech-row">
               <div class="tech-category">Google Sheets</div>
-              <div class="tech-values">Stores structured RTM data including test cases, summaries, and ticket information in dynamically created sheets</div>
+              <div class="tech-values">Stores structured RTM data, test cases, configuration parameters, and content hashes for change detection in dynamically created sheets</div>
             </div>
             <div class="tech-row">
               <div class="tech-category">Google Docs</div>
@@ -194,45 +268,91 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Complete Workflow -->
-      <div class="feature-subsection">
-        <h3 class="subsection-title">Complete Workflow Architecture</h3>
-        <p class="subsection-description">
-          The following diagram illustrates the complete technical architecture with all 77 nodes organized into functional sections. This comprehensive view shows how data flows through collection, AI processing, document generation, test case creation, and finalization phases.
-        </p>
+  <!-- Key Innovations -->
+  <section class="content-section innovations-section">
+    <div class="container">
+      <h2 class="section-title">Key Innovations</h2>
 
-        <div class="screenshot-grid single">
-          <div class="screenshot-item large">
-            <img src="/images/projects/rtm-automation/fig-3.png" alt="Complete n8n Workflow Architecture">
-            <p class="screenshot-caption">Figure 3: Complete n8n Workflow Architecture - 77 Interconnected Nodes</p>
+      <div class="key-innovations-grid">
+        <div class="key-innovation-card">
+          <div class="key-innovation-header">
+            <div class="key-innovation-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3>RAG (Retrieval Augmented Generation)</h3>
           </div>
+          <p class="key-innovation-desc">Enhances AI content generation by retrieving relevant context from previously generated documentation stored in Pinecone.</p>
+          <ul class="key-innovation-details">
+            <li>Task content is embedded and stored in Pinecone vector database</li>
+            <li>During generation, relevant prior documentation is retrieved as context</li>
+            <li>DeepSeek AI generates content informed by both current task data and historical patterns</li>
+            <li>Results in more consistent and contextually accurate RTM documentation</li>
+          </ul>
         </div>
 
-        <div class="workflow-legend">
-          <h4 class="feature-heading">Workflow Node Types</h4>
-          <div class="legend-grid">
-            <div class="legend-item asana">
-              <span class="legend-color"></span>
-              <span class="legend-label">Asana Operations</span>
+        <div class="key-innovation-card">
+          <div class="key-innovation-header">
+            <div class="key-innovation-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
             </div>
-            <div class="legend-item ai">
-              <span class="legend-color"></span>
-              <span class="legend-label">AI Processing</span>
-            </div>
-            <div class="legend-item google">
-              <span class="legend-color"></span>
-              <span class="legend-label">Google Workspace</span>
-            </div>
-            <div class="legend-item data">
-              <span class="legend-color"></span>
-              <span class="legend-label">Data Processing</span>
-            </div>
-            <div class="legend-item control">
-              <span class="legend-color"></span>
-              <span class="legend-label">Control Flow</span>
-            </div>
+            <h3>Hash-Based Change Detection</h3>
           </div>
+          <p class="key-innovation-desc">Uses SHA-256 hashing to detect content changes and avoid redundant processing of unchanged tasks.</p>
+          <ul class="key-innovation-details">
+            <li>SHA-256 hash computed for each task's content on every workflow run</li>
+            <li>Hash compared against stored values in Google Sheets configuration</li>
+            <li>Only tasks with changed content proceed through the generation pipeline</li>
+            <li>Reduces API costs and processing time by eliminating redundant operations</li>
+          </ul>
+        </div>
+
+        <div class="key-innovation-card">
+          <div class="key-innovation-header">
+            <div class="key-innovation-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3>Dynamic Vector Store Management</h3>
+          </div>
+          <p class="key-innovation-desc">Automatically manages vector store lifecycle, including creation, updating, and deletion of embeddings as documentation evolves.</p>
+          <ul class="key-innovation-details">
+            <li>Vectors are upserted with task-specific metadata for targeted retrieval</li>
+            <li>Stale embeddings are automatically cleaned up when tasks are updated</li>
+            <li>Namespace isolation prevents cross-project contamination</li>
+            <li>Embedding dimensions configured via external configuration sheet</li>
+          </ul>
+        </div>
+
+        <div class="key-innovation-card">
+          <div class="key-innovation-header">
+            <div class="key-innovation-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <h3>Configuration-Driven Design</h3>
+          </div>
+          <p class="key-innovation-desc">All workflow parameters are externalized to a Google Sheets configuration sheet, enabling runtime customization without workflow modification.</p>
+          <ul class="key-innovation-details">
+            <li>Pinecone index name, namespace, and dimensions stored externally</li>
+            <li>OpenAI Embeddings and DeepSeek API keys configurable per environment</li>
+            <li>Google Drive folder IDs and template references managed via config</li>
+            <li>Hash storage and comparison thresholds adjustable without code changes</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -243,34 +363,26 @@
     <div class="container">
       <h2 class="section-title">Workflow Process Flow</h2>
       <p class="intro-text">
-        The workflow executes through five distinct phases, each handling specific aspects of the RTM generation process. The following sections detail each phase with visual representations of the data flow and node interactions.
+        The workflow executes through seven distinct phases, each handling specific aspects of the RAG-enhanced RTM generation process. The following sections detail each phase and its role in the automation pipeline.
       </p>
 
       <!-- Phase 1 -->
       <div class="feature-subsection phase-block">
         <div class="phase-header">
           <span class="phase-number">Phase 1</span>
-          <h3 class="subsection-title">Data Collection from Asana</h3>
+          <h3 class="subsection-title">Configuration and Initialization</h3>
         </div>
         <p class="subsection-description">
-          The data collection phase retrieves all necessary information from Asana using OAuth2 authenticated API calls. This includes the primary task details, all associated subtasks, task dependencies, and discussion history through comments and stories.
+          The workflow begins by loading configuration parameters from a dedicated Google Sheets config sheet. This includes Pinecone connection details, OpenAI API settings, Google Drive folder references, and hash comparison data from previous runs.
         </p>
-
-        <div class="screenshot-grid single">
-          <div class="screenshot-item">
-            <img src="/images/projects/rtm-automation/fig-4.png" alt="Phase 1 - Data Collection">
-            <p class="screenshot-caption">Figure 4: Phase 1 - Data Collection from Asana</p>
-          </div>
-        </div>
 
         <div class="operations-list">
           <h4 class="feature-heading">Key Operations</h4>
           <ul>
-            <li>Workflow triggers on Asana task update or manual execution</li>
-            <li>Retrieves complete task details including title, description, due dates, and assignees</li>
-            <li>Fetches all associated subtasks with their complete metadata</li>
-            <li>Extracts task dependencies to maintain requirement relationships</li>
-            <li>Collects all comments and discussions for context preservation</li>
+            <li>Loads configuration parameters from Google Sheets config sheet</li>
+            <li>Initializes Pinecone client with configured index and namespace</li>
+            <li>Sets up OpenAI API connection for embeddings and DeepSeek for content generation</li>
+            <li>Retrieves stored content hashes from previous workflow executions</li>
           </ul>
         </div>
       </div>
@@ -279,26 +391,19 @@
       <div class="feature-subsection phase-block">
         <div class="phase-header">
           <span class="phase-number">Phase 2</span>
-          <h3 class="subsection-title">AI-Powered Data Processing</h3>
+          <h3 class="subsection-title">Data Collection and Change Detection</h3>
         </div>
         <p class="subsection-description">
-          DeepSeek AI processes the raw JSON data through structured information extraction nodes. Each data type (tasks, subtasks, dependencies, comments) is processed through dedicated extraction nodes with predefined schemas to ensure consistent data structure.
+          Retrieves task data from Asana via OAuth2 API and computes SHA-256 content hashes. Only tasks whose hashes differ from stored values proceed to the generation pipeline, eliminating redundant processing of unchanged content.
         </p>
 
-        <div class="screenshot-grid single">
-          <div class="screenshot-item">
-            <img src="/images/projects/rtm-automation/fig-5.png" alt="Phase 2 - AI Processing">
-            <p class="screenshot-caption">Figure 5: Phase 2 - AI-Powered Data Processing Pipeline</p>
-          </div>
-        </div>
-
         <div class="operations-list">
-          <h4 class="feature-heading">Processing Steps</h4>
+          <h4 class="feature-heading">Key Operations</h4>
           <ul>
-            <li>DeepSeek AI processes raw JSON data through structured extraction nodes</li>
-            <li>Extracts specific fields using defined schemas for name, URL, date, and text properties</li>
-            <li>String escaper nodes handle special characters to prevent data corruption</li>
-            <li>Aggregation nodes compile related data points for comprehensive documentation</li>
+            <li>Retrieves complete task details, subtasks, dependencies, and comments from Asana</li>
+            <li>Computes SHA-256 hash of task content for change detection</li>
+            <li>Compares computed hash against stored hash from previous run</li>
+            <li>Routes changed tasks to generation pipeline; unchanged tasks are skipped</li>
           </ul>
         </div>
       </div>
@@ -307,26 +412,19 @@
       <div class="feature-subsection phase-block">
         <div class="phase-header">
           <span class="phase-number">Phase 3</span>
-          <h3 class="subsection-title">Document Generation</h3>
+          <h3 class="subsection-title">Vector Store Preparation</h3>
         </div>
         <p class="subsection-description">
-          The document generation phase creates structured data repositories in Google Sheets and formatted RTM documents in Google Docs. Each document is dynamically named based on the task and populated with the extracted and processed data.
+          Prepares the Pinecone vector store by embedding task content using OpenAI Embeddings and upserting vectors with task-specific metadata. Stale vectors from previous versions are cleaned up to maintain data freshness.
         </p>
 
-        <div class="screenshot-grid single">
-          <div class="screenshot-item">
-            <img src="/images/projects/rtm-automation/fig-6.png" alt="Phase 3 - Document Generation">
-            <p class="screenshot-caption">Figure 6: Phase 3 - Document Generation Flow</p>
-          </div>
-        </div>
-
         <div class="operations-list">
-          <h4 class="feature-heading">Generation Process</h4>
+          <h4 class="feature-heading">Key Operations</h4>
           <ul>
-            <li>Creates Google Sheets with task-specific tabs for raw data storage</li>
-            <li>Appends structured data including titles, descriptions, dates, subtasks, dependencies, and comments</li>
-            <li>Generates Google Docs RTM documents with formatted sections and proper hierarchy</li>
-            <li>Updates documents with AI-generated content using structured output parsers</li>
+            <li>Generates embeddings for task content using OpenAI Embeddings API</li>
+            <li>Deletes stale vectors associated with the current task from Pinecone</li>
+            <li>Upserts new vectors with task metadata for targeted retrieval</li>
+            <li>Validates vector store state before proceeding to generation</li>
           </ul>
         </div>
       </div>
@@ -335,27 +433,19 @@
       <div class="feature-subsection phase-block">
         <div class="phase-header">
           <span class="phase-number">Phase 4</span>
-          <h3 class="subsection-title">Test Case Generation</h3>
+          <h3 class="subsection-title">Context Retrieval and RTM Generation</h3>
         </div>
         <p class="subsection-description">
-          The test case generation phase leverages AI agents to create comprehensive test documentation. This includes generating test summaries and detailed test cases based on the task requirements, which are then populated into spreadsheet templates.
+          Retrieves relevant context from Pinecone vector store and uses RAG-augmented prompts with DeepSeek AI to generate comprehensive RTM documentation. The retrieved context ensures consistency with previously generated documentation.
         </p>
 
-        <div class="screenshot-grid single">
-          <div class="screenshot-item">
-            <img src="/images/projects/rtm-automation/fig-7.png" alt="Phase 4 - Test Case Generation">
-            <p class="screenshot-caption">Figure 7: Phase 4 - Test Case Generation Pipeline</p>
-          </div>
-        </div>
-
         <div class="operations-list">
-          <h4 class="feature-heading">Test Generation Process</h4>
+          <h4 class="feature-heading">Key Operations</h4>
           <ul>
-            <li>Creates test case templates from Google Drive templates</li>
-            <li>AI agents generate test summary rows based on task requirements</li>
-            <li>AI creates detailed test case rows with steps and expected results</li>
-            <li>Appends ticket information to tracking spreadsheet</li>
-            <li>Populates test case template with generated test cases</li>
+            <li>Queries Pinecone for semantically similar documents as generation context</li>
+            <li>Constructs RAG-augmented prompts combining task data and retrieved context</li>
+            <li>DeepSeek AI generates structured RTM content with full traceability</li>
+            <li>Creates and populates Google Docs with formatted RTM documentation</li>
           </ul>
         </div>
       </div>
@@ -364,19 +454,61 @@
       <div class="feature-subsection phase-block">
         <div class="phase-header">
           <span class="phase-number">Phase 5</span>
-          <h3 class="subsection-title">Finalization & Feedback Loop</h3>
+          <h3 class="subsection-title">Test Case Generation</h3>
         </div>
         <p class="subsection-description">
-          The final phase ensures quality control and creates a feedback loop back to the project management system for continuous improvement.
+          Leverages DeepSeek AI with RAG context to generate comprehensive test cases, test summaries, and test documentation. Results are populated into Google Sheets templates with structured data.
         </p>
 
         <div class="operations-list">
-          <h4 class="feature-heading">Finalization Steps</h4>
+          <h4 class="feature-heading">Key Operations</h4>
+          <ul>
+            <li>Creates test case templates from Google Drive templates</li>
+            <li>AI agents generate test summary rows using RAG-enhanced prompts</li>
+            <li>Generates detailed test case rows with steps and expected results</li>
+            <li>Populates test case spreadsheet with generated content</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 6 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 6</span>
+          <h3 class="subsection-title">Asana Integration</h3>
+        </div>
+        <p class="subsection-description">
+          Creates feedback loops by generating Asana subtasks for QA review and validation. Links generated artifacts back to the originating task for complete traceability.
+        </p>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Key Operations</h4>
           <ul>
             <li>AI generates RTM subtask details for quality review</li>
             <li>Creates Asana subtasks for QA review and validation</li>
-            <li>Updates master tracking spreadsheet with links to all generated artifacts</li>
-            <li>Wait nodes ensure proper sequencing and data consistency across operations</li>
+            <li>Links generated documentation back to source tasks</li>
+            <li>Updates task metadata with generation status and artifact links</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 7 -->
+      <div class="feature-subsection phase-block">
+        <div class="phase-header">
+          <span class="phase-number">Phase 7</span>
+          <h3 class="subsection-title">Data Storage and Finalization</h3>
+        </div>
+        <p class="subsection-description">
+          Stores updated content hashes, updates the master tracking spreadsheet with links to all generated artifacts, and ensures data consistency across all integrated platforms.
+        </p>
+
+        <div class="operations-list">
+          <h4 class="feature-heading">Key Operations</h4>
+          <ul>
+            <li>Updates content hash in Google Sheets config for next-run comparison</li>
+            <li>Appends ticket information to master tracking spreadsheet</li>
+            <li>Stores document links for all generated artifacts</li>
+            <li>Validates final state and ensures data consistency across platforms</li>
           </ul>
         </div>
       </div>
@@ -398,8 +530,30 @@
               <circle cx="12" cy="12" r="2"></circle>
             </svg>
           </div>
-          <h3>AI-Powered Information Extraction</h3>
-          <p>Leverages DeepSeek AI's structured information extraction capabilities to intelligently parse unstructured JSON data. Rather than relying on rigid data mapping, the AI model identifies and extracts relevant fields based on semantic understanding, making the solution resilient to schema variations and capable of handling complex nested data structures.</p>
+          <h3>RAG-Powered Content Generation</h3>
+          <p>Leverages Retrieval Augmented Generation with Pinecone vector store to provide DeepSeek AI with relevant historical context during RTM generation. This approach ensures documentation consistency across related tasks and reduces hallucination by grounding outputs in verified prior documentation.</p>
+        </div>
+
+        <div class="innovation-card">
+          <div class="innovation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Intelligent Change Detection</h3>
+          <p>SHA-256 hash-based change detection compares current task content against stored hashes from previous runs. Only modified tasks trigger the full generation pipeline, significantly reducing API costs and processing time while ensuring documentation stays current.</p>
+        </div>
+
+        <div class="innovation-card">
+          <div class="innovation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+          </div>
+          <h3>Dynamic Vector Store Management</h3>
+          <p>Automatically manages the Pinecone vector store lifecycle including embedding creation, upsertion with metadata, stale vector cleanup, and namespace isolation. This ensures the RAG context remains fresh and relevant as documentation evolves.</p>
         </div>
 
         <div class="innovation-card">
@@ -411,18 +565,8 @@
               <line x1="16" y1="17" x2="8" y2="17"></line>
             </svg>
           </div>
-          <h3>Dynamic Document Generation</h3>
-          <p>Creates multiple document types including Google Sheets for data storage, Google Docs for formatted RTM documents, and test case templates. Each document is dynamically generated based on the task name and populated with extracted data, ensuring consistency while maintaining flexibility for different project structures.</p>
-        </div>
-
-        <div class="innovation-card">
-          <div class="innovation-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
-          <h3>Error Handling & Data Integrity</h3>
-          <p>Multiple string escaper nodes throughout the workflow ensure special characters are properly handled, preventing data corruption in JSON payloads and API requests. Conditional branches check for empty data sets, and wait nodes ensure proper sequencing when dealing with asynchronous operations across multiple platforms.</p>
+          <h3>HTML-Based Document Generation</h3>
+          <p>Creates Google Docs RTM documents using structured HTML content injection, enabling rich formatting including tables, headers, lists, and traceability links. This approach provides precise control over document structure compared to plain text insertion.</p>
         </div>
 
         <div class="innovation-card">
@@ -433,8 +577,8 @@
               <line x1="9" y1="21" x2="9" y2="9"></line>
             </svg>
           </div>
-          <h3>Comprehensive Data Aggregation</h3>
-          <p>Includes sophisticated aggregation logic that combines data from multiple sources (tasks, subtasks, dependencies, comments) into cohesive documentation. This ensures that all related information is properly linked and presented together, maintaining the context and relationships between different elements of the project.</p>
+          <h3>Error Handling and Data Integrity</h3>
+          <p>Comprehensive error handling with conditional branching, retry logic, and failure notifications. String escaper nodes prevent data corruption in JSON payloads, while wait nodes ensure proper sequencing across asynchronous multi-platform operations.</p>
         </div>
       </div>
 
@@ -443,29 +587,29 @@
         <h3 class="subsection-title">Workflow Complexity Metrics</h3>
         <div class="metrics-grid">
           <div class="metric-card">
-            <span class="metric-value">77</span>
+            <span class="metric-value">56</span>
             <span class="metric-label">Total Nodes</span>
             <span class="metric-description">Interconnected automation components</span>
           </div>
           <div class="metric-card">
-            <span class="metric-value">7</span>
+            <span class="metric-value">2</span>
             <span class="metric-label">AI Operations</span>
-            <span class="metric-description">DeepSeek AI model instances</span>
+            <span class="metric-description">DeepSeek AI agent instances</span>
           </div>
           <div class="metric-card">
-            <span class="metric-value">5</span>
-            <span class="metric-label">Extractors</span>
-            <span class="metric-description">Specialized extraction nodes with custom schemas</span>
+            <span class="metric-value">Vector</span>
+            <span class="metric-label">Operations</span>
+            <span class="metric-description">Pinecone embed, upsert, query, delete</span>
           </div>
           <div class="metric-card">
-            <span class="metric-value">6</span>
-            <span class="metric-label">Data Processors</span>
-            <span class="metric-description">Code nodes for string escaping and transformation</span>
+            <span class="metric-value">Multiple</span>
+            <span class="metric-label">Code Nodes</span>
+            <span class="metric-description">Custom JavaScript transformations</span>
           </div>
           <div class="metric-card">
-            <span class="metric-value">15+</span>
+            <span class="metric-value">20+</span>
             <span class="metric-label">API Integrations</span>
-            <span class="metric-description">HTTP requests to Google APIs and Asana</span>
+            <span class="metric-description">HTTP requests across all platforms</span>
           </div>
         </div>
       </div>
@@ -489,7 +633,7 @@
           <div class="comparison-row">
             <div class="comparison-metric">RTM Creation Time</div>
             <div class="comparison-before">3-5 hours</div>
-            <div class="comparison-after highlight">5-10 minutes</div>
+            <div class="comparison-after highlight">3-7 minutes</div>
           </div>
           <div class="comparison-row">
             <div class="comparison-metric">Documentation Consistency</div>
@@ -499,12 +643,27 @@
           <div class="comparison-row">
             <div class="comparison-metric">Data Entry Errors</div>
             <div class="comparison-before">15-20%</div>
-            <div class="comparison-after highlight">&lt;2%</div>
+            <div class="comparison-after highlight">&lt;1%</div>
           </div>
           <div class="comparison-row">
             <div class="comparison-metric">Time Savings per Task</div>
             <div class="comparison-before">-</div>
-            <div class="comparison-after highlight">94%</div>
+            <div class="comparison-after highlight">95%</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">Workflow Complexity</div>
+            <div class="comparison-before">Manual multi-step</div>
+            <div class="comparison-after highlight">56 automated nodes</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">Context Awareness</div>
+            <div class="comparison-before">None</div>
+            <div class="comparison-after highlight">RAG-enabled</div>
+          </div>
+          <div class="comparison-row">
+            <div class="comparison-metric">Redundant Processing</div>
+            <div class="comparison-before">Every run</div>
+            <div class="comparison-after highlight">Eliminated</div>
           </div>
         </div>
       </div>
@@ -526,6 +685,10 @@
               <strong>Audit Ready:</strong>
               <span>Complete traceability from requirements to test cases reduces audit preparation time</span>
             </li>
+            <li>
+              <strong>Context-Aware Generation:</strong>
+              <span>RAG ensures each document is informed by relevant historical context, improving accuracy and consistency</span>
+            </li>
           </ul>
         </div>
 
@@ -533,8 +696,12 @@
           <h3 class="benefit-title">Quality Benefits</h3>
           <ul class="benefit-list">
             <li>
-              <strong>Knowledge Preservation:</strong>
-              <span>Automatic capture of dependencies and comments preserves institutional knowledge</span>
+              <strong>Intelligent Caching:</strong>
+              <span>Hash-based change detection eliminates redundant processing, reducing API costs and improving efficiency</span>
+            </li>
+            <li>
+              <strong>Vector-Based Context Retrieval:</strong>
+              <span>Pinecone integration provides semantic search capabilities for retrieving relevant prior documentation</span>
             </li>
             <li>
               <strong>Scalability:</strong>
@@ -562,7 +729,9 @@
             <li>n8n workflow automation platform (self-hosted or cloud)</li>
             <li>Asana workspace with OAuth2 API access</li>
             <li>Google Workspace account with Sheets, Docs, and Drive API enabled</li>
-            <li>DeepSeek AI API credentials</li>
+            <li>OpenAI API key for Embeddings and DeepSeek API credentials</li>
+            <li>Pinecone account with configured index</li>
+            <li>Google Sheets configuration sheet for workflow parameters</li>
             <li>Master tracking spreadsheet for document links</li>
           </ul>
         </div>
@@ -571,9 +740,11 @@
           <h3>Configuration Requirements</h3>
           <ul>
             <li>OAuth2 credentials configured for Asana and Google services</li>
+            <li>OpenAI API key configured for Embeddings and DeepSeek API key for content generation</li>
+            <li>Pinecone index name, namespace, and embedding dimensions defined</li>
             <li>Spreadsheet IDs and folder structures defined for document organization</li>
+            <li>Configuration sheet with runtime parameters and hash storage</li>
             <li>Template structures established for test case and RTM documents</li>
-            <li>AI extraction schemas configured for consistent data parsing</li>
             <li>Workflow execution permissions and error notification settings</li>
           </ul>
         </div>
@@ -590,19 +761,13 @@
         <div class="enhancement-item">
           <span class="enhancement-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+              <path d="M12 2a10 10 0 0 1 10 10"></path>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
             </svg>
           </span>
-          <span class="enhancement-text">Integration with additional project management tools like Jira or Monday.com</span>
-        </div>
-        <div class="enhancement-item">
-          <span class="enhancement-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
-          </span>
-          <span class="enhancement-text">Automated test case generation from acceptance criteria using advanced AI models</span>
+          <span class="enhancement-text">Advanced test case generation with automated coverage analysis and gap detection</span>
         </div>
         <div class="enhancement-item">
           <span class="enhancement-icon">
@@ -610,17 +775,17 @@
               <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
             </svg>
           </span>
-          <span class="enhancement-text">Real-time synchronization between Asana updates and RTM documents</span>
+          <span class="enhancement-text">Intelligent test prioritization based on risk analysis and change impact assessment</span>
         </div>
         <div class="enhancement-item">
           <span class="enhancement-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="3" y1="9" x2="21" y2="9"></line>
-              <line x1="9" y1="21" x2="9" y2="9"></line>
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </span>
-          <span class="enhancement-text">Dashboard visualization of testing coverage and traceability metrics</span>
+          <span class="enhancement-text">Multi-language support for generating documentation in different locales</span>
         </div>
         <div class="enhancement-item">
           <span class="enhancement-icon">
@@ -630,15 +795,17 @@
               <path d="M2 12l10 5 10-5"></path>
             </svg>
           </span>
-          <span class="enhancement-text">Version control integration for RTM document history tracking</span>
+          <span class="enhancement-text">Enhanced RAG with fine-tuned embeddings trained on domain-specific documentation</span>
         </div>
         <div class="enhancement-item">
           <span class="enhancement-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
             </svg>
           </span>
-          <span class="enhancement-text">Machine learning models for predicting test execution times and resource requirements</span>
+          <span class="enhancement-text">Automated quality scoring of generated documentation with feedback loops for continuous improvement</span>
         </div>
       </div>
     </div>
@@ -649,13 +816,13 @@
     <div class="container">
       <h2 class="section-title">Conclusion</h2>
       <p class="conclusion-text">
-        This n8n workflow demonstrates how intelligent automation can transform traditional QA processes. By combining AI-powered data extraction, multi-platform integration, and automated document generation, the solution achieves a <strong>94% reduction in manual effort</strong> while improving documentation quality and consistency. The workflow's 77 interconnected nodes represent a scalable, maintainable approach to requirements traceability that can adapt to evolving project needs and team structures.
+        This n8n workflow demonstrates how Retrieval Augmented Generation and vector databases can transform traditional QA documentation processes. By combining DeepSeek AI with Pinecone vector store for context-aware generation, OpenAI Embeddings for text vectorization, SHA-256 hash-based caching for intelligent change detection, and multi-platform integration across Asana and Google Workspace, the solution achieves a <strong>95% reduction in manual effort</strong> while improving documentation quality, consistency, and contextual accuracy.
       </p>
       <p class="conclusion-text">
-        The success of this implementation highlights the value of no-code/low-code automation platforms in solving complex enterprise challenges. By leveraging existing tools and APIs through visual workflow design, organizations can achieve significant process improvements without extensive custom development efforts. The integration of AI capabilities through DeepSeek further enhances the solution's ability to handle unstructured data and generate intelligent outputs.
+        The workflow's 56 interconnected nodes represent a scalable, maintainable approach to requirements traceability that continuously improves through its RAG pipeline. Each run enriches the vector store with new documentation context, creating a virtuous cycle where the system becomes more capable over time. The hash-based change detection ensures this improvement comes without wasteful reprocessing of unchanged content.
       </p>
       <p class="conclusion-text highlight-text">
-        As organizations continue to adopt agile methodologies and increase their software delivery velocity, automated RTM generation becomes not just a productivity enhancement but a necessity for maintaining quality standards at scale.
+        As organizations adopt AI-powered automation, the combination of RAG, vector databases, and intelligent caching represents a new standard for documentation automation - one that is not just faster, but fundamentally more intelligent and context-aware than traditional approaches.
       </p>
     </div>
   </section>
