@@ -27,14 +27,14 @@ export class PortfolioDataService {
       location: 'Remote',
       description: 'Design and implement complex n8n workflows for client automation projects across project management, documentation, and business process optimization.',
       responsibilities: [
-        'Built production-grade 77-node workflow automating Requirements Traceability Matrix (RTM) generation, reducing manual documentation time from 3-5 hours to 5-10 minutes per task (94% reduction)',
-        'Integrated AI agents (DeepSeek LLM) with Asana API, Google Sheets API, Google Docs API, and Google Drive API for intelligent data extraction, transformation, and automated document generation',
-        'Implemented complex workflow orchestration with conditional branching, error handling, retry logic, and failure notifications across multiple API platforms',
+        'Built production-grade 56-node workflow automating Requirements Traceability Matrix (RTM) generation with RAG, reducing manual documentation time from 3-5 hours to 3-7 minutes per task (95% reduction)',
+        'Integrated DeepSeek AI with Pinecone vector store (via OpenAI Embeddings), Asana API, Google Sheets API, Google Docs API, and Google Drive API for context-aware data extraction, transformation, and automated document generation',
+        'Implemented RAG (Retrieval Augmented Generation) pipeline with OpenAI Embeddings and Pinecone vector store for context-aware content generation and intelligent caching via SHA-256 hash-based change detection',
         'Designed and configured OAuth2 authentication, webhook integrations, and REST API connections for seamless multi-platform data synchronization',
-        'Processed and validated JSON data using custom JavaScript transformations, ensuring data integrity and preventing duplicate operations through idempotent workflow design',
-        'Created automated test case generation system using AI agents, populating Google Sheets with structured data and generating professional documentation with proper traceability links'
+        'Processed and validated JSON data using custom JavaScript transformations, ensuring data integrity and preventing duplicate operations through hash-based change detection and idempotent workflow design',
+        'Created automated test case generation system using DeepSeek AI agents with RAG context, populating Google Sheets with structured data and generating professional documentation with proper traceability links'
       ],
-      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API', 'OAuth2', 'JavaScript'],
+      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'OpenAI Embeddings', 'Pinecone', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API', 'OAuth2', 'JavaScript'],
       type: 'work'
     },
     {
@@ -134,6 +134,8 @@ export class PortfolioDataService {
     { name: 'n8n', category: 'AI & Automation' },
     { name: 'AI Agents', category: 'AI & Automation' },
     { name: 'DeepSeek LLM', category: 'AI & Automation' },
+    { name: 'OpenAI Embeddings', category: 'AI & Automation' },
+    { name: 'Pinecone', category: 'AI & Automation' },
     { name: 'Claude Code', category: 'AI & Automation' },
     { name: 'Cursor', category: 'AI & Automation' },
     { name: 'Workflow Orchestration', category: 'AI & Automation' },
@@ -214,16 +216,16 @@ export class PortfolioDataService {
     {
       id: 'proj-6',
       name: 'AI-Powered Project Management Automation',
-      description: 'AI-powered n8n workflow automating project documentation and test case generation across Asana and Google APIs.',
-      longDescription: 'A sophisticated automation workflow built with n8n that integrates multiple AI agents (powered by DeepSeek) with project management tools. The system extracts task data from Asana, uses AI to generate structured documentation, test plans, and test cases, then automatically creates and populates Google Docs and Google Sheets with the AI-generated content.',
-      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API'],
+      description: 'AI-powered n8n workflow with RAG automating project documentation and test case generation across Asana, Pinecone, and Google APIs.',
+      longDescription: 'A sophisticated automation workflow built with n8n that integrates DeepSeek AI with Pinecone vector store (via OpenAI Embeddings) for RAG-powered content generation. The system extracts task data from Asana, uses hash-based change detection to avoid redundant processing, retrieves relevant context from Pinecone, and generates structured documentation, test plans, and test cases with context-aware AI, then automatically creates and populates Google Docs and Google Sheets.',
+      technologies: ['n8n', 'AI Agents', 'DeepSeek LLM', 'OpenAI Embeddings', 'Pinecone', 'Asana API', 'Google Sheets API', 'Google Docs API', 'Google Drive API'],
       caseStudyUrl: 'projects/rtm-automation',
       status: 'completed',
       featured: true,
       highlights: [
-        'AI-powered test case generation',
-        'Automated documentation creation',
-        'Multi-platform API integration'
+        'RAG-powered content generation with Pinecone',
+        'Hash-based intelligent change detection',
+        'Multi-platform API integration with vector store'
       ]
     },
     {
