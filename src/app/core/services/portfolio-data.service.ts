@@ -136,7 +136,7 @@ export class PortfolioDataService {
     { name: 'DeepSeek LLM', category: 'AI & Automation' },
     { name: 'OpenAI Embeddings', category: 'AI & Automation' },
     { name: 'Pinecone', category: 'AI & Automation' },
-    { name: 'Claude Code', category: 'AI & Automation' }
+    { name: 'Claude Code', category: 'AI & Automation' },
 
     // Programming & Development
     { name: 'JavaScript', category: 'Programming' },
